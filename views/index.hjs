@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type="text/css" href='./style.css'/>
+    <script src="./libs/d3.v3.min.js"></script>
+    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+    <script src="./libs/jquery-ui.min.js"></script>
+    <script src='./javascripts/script.js'></script>
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css">
+    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home">Shire</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/events">Events</a></li>
+        <li><a href="/photos">Photos</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/movies">Movies</a></li>
+            <li><a href="/contacts">Contacts</a></li>
+            <li><a href="#">Other Stuff</a></li>
+            <li class="divider"></li>
+            <li><a href="#">More Stuff</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+    
+    <div class="main">
+        <img id="title" src="./images/title.png"?>
+        
+        <img id="shirePic" src="http://jonathanphotos.com/Pictures/Australasia%20n%20Oceania%20web/New%20Zealand%20web/Hobbiton/Walking%20Through%20The%20Shire%20850%20n%2072.jpg"/>
+        <img id="shirePic2" src='https://scontent-a.xx.fbcdn.net/hphotos-xfp1/t1.0-9/1374791_10201742025928336_1997009311_n.jpg'>
+        <p>The Shire resides in the Next House 4 West wing. We're a vibrant community of many diverse students from all over the country and 
+the world. Our members have a wide range of interests and majors, such as 
+Course 6, Course 16, Course 7, and Course 20, to name a few. Together, we enjoy 
+playing games (video games, computer games, card games, board games, Korean 
+slapping games…), playing music (guitar, violin, piano, …), watching movies (of all 
+genres), and of course eating at study breaks! Some of our members also 
+participate in theater (like Next Act – a musical run every year by our dorm), 
+robotics competitions, programming competitions, Association of Taiwanese 
+Students, religious groups, musical groups, sports, and Next Sustain (a Next 
+House student group focused on environmental issues at the dorm), among 
+others. Most of us really enjoy just hanging around, but we also like engaging in 
+shenanigans from time to time.</p>
+
+    </div>
+    
+
+
+    <div class="footnote">
+        <address>
+            Written by Raymond Wu<br>
+            Contact me at: <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a>
+        </address>
+    </div>
+    
+</body>
+</html>
