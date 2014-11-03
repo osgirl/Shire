@@ -1,6 +1,6 @@
 body{
     background: url(./images/background.jpg) no-repeat center center fixed;
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: 'Lato', sans-serif;
     margin-left:0px;
     margin-right:0px;
     
@@ -15,7 +15,7 @@ body{
     margin-left:auto;
     margin-right:auto;
     margin-top:40px;
-    background:url(./images/background2.jpg) no-repeat center center fixed;
+    background-color:#31CC5A;
     box-shadow:0 0 15px black;
 }
 .main #welcome{
@@ -23,7 +23,7 @@ body{
     padding-top:20px;
     font-size:65px;
     text-align:center;
-    font-family:'Source Sans Pro',sans-serif;
+    font-family:'Lato',sans-serif;
 }
 
 
@@ -62,7 +62,7 @@ body{
     margin-right:30px;
     text-align:center;
     font-size:22px;
-    font-family:'Source Sans Pro',sans-serif;
+    font-family:'Lato',sans-serif;
 }
 
 address{
