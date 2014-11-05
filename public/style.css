@@ -12,9 +12,11 @@ body{
     width:100%;
     margin-left:auto;
     margin-right:auto;
-    margin-top:40px;
+    margin-top:80px;
     background-color: #31cc5a;
-    box-shadow:0 0 15px black;
+    border-top: 4px solid #049F65;
+    border-bottom: 4px solid #049F65;
+    /*box-shadow:0 0 15px black;*/
 }
 .main #welcome{
     position:relative;
@@ -73,12 +75,12 @@ address{
 }
 address a{
     text-decoration:none;
-    color:white;
+    color:#333;
 }
 address a:hover{
     text-decoration: none;
     font-weight: bold;
-    color:#333;
+    color:#27A348;
 }
 
 

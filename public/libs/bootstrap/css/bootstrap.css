@@ -3138,9 +3138,9 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
+  background-color: #31cc5a;
+  /*-webkit-background-clip: padding-box;
+          background-clip: padding-box;*/
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
@@ -3155,7 +3155,7 @@ tbody.collapse.in {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
-  background-color: #e5e5e5;
+  background-color: #049F65;
 }
 .dropdown-menu > li > a {
   display: block;
@@ -3163,12 +3163,12 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333;
+  color: white;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
+  color: #333;
   text-decoration: none;
   background-color: transparent;
   font-size:bold;
@@ -3777,7 +3777,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -4098,10 +4098,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
+  position:fixed;
+  z-index:1;
+  width:100%;
+  top:0px;
   margin-top: -3px;
   background:#27A348;
-  border-color: black;
-  box-shadow:0 0 15px black;
+  border-bottom-color: #B5CCB6;
+  /*box-shadow:0 0 15px black;*/
 }
 .navbar-default .navbar-brand {
   color: #fff;
