@@ -3132,10 +3132,10 @@ tbody.collapse.in {
   display: none;
   /*min-width: 160px;*/
   padding: 5px 0;
-  margin-left: -25px;
+  margin-left: -17px;
   text-align: center;
   list-style: none;
-  background-color: rgba(152, 230, 172, 0.5);
+  background-color: rgba(152, 230, 172, 0.8);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   /*-webkit-background-clip: padding-box;
