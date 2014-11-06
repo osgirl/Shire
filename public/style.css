@@ -91,10 +91,8 @@ body{
     width: 100%;
 }
 
-#festivePic img{
-    display: inline-block;
-    margin:0;
-    clear:both;
+.main .pic#festivePic{
+    border:none;
 }
 
 .footnote{
