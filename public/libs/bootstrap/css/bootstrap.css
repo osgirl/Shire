@@ -4060,7 +4060,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  background-color: rgba(152, 230, 172, .5);
+  background-color: rgba(152, 230, 172, .9);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   border-bottom: 1px solid rgba(4, 159, 101, 0.5);
@@ -4105,9 +4105,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   width:100%;
   top:0px;
   margin-top: -3px;
-  background:#98E6AC;
+  background-color:transparent;
   border-bottom-color: transparent; 
-  /*#B5CCB6; color for bottom border after i learn jQuery*/
+  /*#98E6AC*/
   /*box-shadow:0 0 15px black;*/
 }
 .navbar-default .navbar-brand {

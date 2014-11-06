@@ -53,8 +53,8 @@
     <p>Ye Olde Shire</p>
   </div>
     
-  <div class="diversity">
-      <img id="shirePic" src="./images/shirepic.jpg" />
+  <div class="main diversity">
+      <img class="pic" id="shirePic" src="./images/shirepic.jpg" />
       <p id="header">diversity</p>
       <p>
         We're a vibrant community of many diverse students from all over the country and the world. <br />
@@ -63,18 +63,26 @@
         Association of Taiwanese Students, Next Sustain, Next Make, and Next Act to name a few.
       </p>
   </div>
-  <div class="community">
-      <img id="shirePic" src="./images/shirepic.jpg" />
-      <p id="header">community</p>
+  <div class="main family">
+      <p id="header">family</p>
       <p>
-        We're a vibrant community of many diverse students from all over the country and the world. <br />
-        Our members have a wide range of interests and represent various different majors. <br />
-        Residents represent numerous student groups such as <br />
-        Association of Taiwanese Students, Next Sustain, Next Make, and Next Act to name a few.
+
       </p>
+      <img class="pic" id="swing" src="./images/swing.jpg" />
   </div>
     
+  <div class="main festivity">
+      <p id="header">festivity</p>
+      <p>
 
+      </p>
+  </div>
+
+  <!--<div id="festivePic">
+    <img src="./images/skittles.jpg" />
+    <img src="./images/massage.jpg" />
+    <img src="./images/lindsey.jpg" />
+  </div>-->
 
   <div class="footnote">
       <address>

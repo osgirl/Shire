@@ -21,27 +21,31 @@ body{
     color:#035F23;
 }
 
-.diversity{
+.main{
     position:relative;
     width:100%;
-    margin-left:auto;
-    margin-right:auto;
-    background: -webkit-linear-gradient(left, #4BCF25 , #1C9B48); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #4BCF25, #1C9B48); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #4BCF25, #1C9B48); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #4BCF25 , #1C9B48); /* Standard syntax */
+    margin:0;
+    text-align: center;
     padding-bottom: 20px;
 }
-.diversity #welcome{
-    position:relative;
-    padding-top:20px;
-    font-size:65px;
-    text-align:center;
+
+.main #header{
+    font-size: 3em;
+    font-weight: bold;
+    padding-top:10px;
+    padding-bottom: 5px;
+    color:#F3F3F3;
     font-family:'Lato',sans-serif;
 }
 
+.main p{
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.25em;
+    color:#F3F3F3;
+}
 
-.diversity #shirePic{
+.main .pic{
     position:relative;
     display:block;
     width:100%;
@@ -49,20 +53,48 @@ body{
     border-bottom: 4px solid #049F65;
 }
 
-.diversity #header{
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    margin-top:10px;
-    margin-bottom: 5px;
+.main.diversity{
+    background: -webkit-linear-gradient(left, #4BCF25 , #1C9B48); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #4BCF25, #1C9B48); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #4BCF25, #1C9B48); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #4BCF25 , #1C9B48); /* Standard syntax */
 }
 
-.diversity p{
-    margin:auto;
-    text-align:center;
-    font-size:1.25em;
-    color:#DBDBDB;
-    font-family:'Lato',sans-serif;
+.main.diversity p{
+
+}
+
+.main.family{
+    background-color: white;
+    padding-bottom:0;
+}
+
+.main.family #header{
+    color:#0BBB79;
+}
+
+.main .pic#swing{
+    border:none;
+}
+
+.main.festivity{
+    background-color: white;
+}
+
+.main.festivity #header{
+    color:#0BBB79;
+}
+
+#festivePic{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#festivePic img{
+    display: inline-block;
+    margin:0;
+    clear:both;
 }
 
 .footnote{
