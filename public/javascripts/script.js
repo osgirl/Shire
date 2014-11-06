@@ -12,6 +12,18 @@ $(document).ready(function(){
 	})
 })
 */
-$("body").click(function(){
+$('body').click(function(){
 	console.log("jfsdkjfksdj")
 })
+
+$(document).ready(function(){
+	$(".dropdown").hover(function(){
+		$(".dropdown-menu").css({"display":"inline-block"});
+	},
+	function(){
+		$(".dropdown-menu").css({"display":"none"});
+	})
+	//$('#dropdownRAYRAY').hover()
+})
+
+//		$(".dropbdown-menu").css({"display":"inline-block"});
