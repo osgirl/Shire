@@ -14,64 +14,74 @@
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home">SHIRE</a>
-    </div>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">SHIRE</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/events">EVENTS</a></li>
-        <li><a href="/photos">PHOTOS</a></li>
-        <li class="dropdown" id="dropdownRAYRAY">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER</a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/movies">MOVIES</a></li>
-            <li><a href="/contacts">CONTACTS</a></li>
-            <li><a href="#">MISC</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/events">EVENTS</a></li>
+            <li><a href="/photos">PHOTOS</a></li>
+            <li class="dropdown" id="dropdownRAYRAY">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/movies">MOVIES</a></li>
+                <li><a href="/contacts">CONTACTS</a></li>
+                <li><a href="#">MISC</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login">LOGIN</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+          <form class="navbar-form navbar-left" role="search">
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">LOGIN</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
   <div class="welcome">
     <p>Ye Olde Shire</p>
   </div>
     
-    <div class="diversity">
-        <img id="shirePic" src="./images/shirepic.jpg" />
-        <p id="header">diversity</p>
-        <p>
-          We're a vibrant community of many diverse students from all over the country and the world. <br />
-          Our members have a wide range of interests and represent various different majors. <br />
-          Residents represent numerous student groups such as <br />
-          Association of Taiwanese Students, Next Sustain, Next Make, and Next Act to name a few.
-        </p>
-    </div>
+  <div class="diversity">
+      <img id="shirePic" src="./images/shirepic.jpg" />
+      <p id="header">diversity</p>
+      <p>
+        We're a vibrant community of many diverse students from all over the country and the world. <br />
+        Our members have a wide range of interests and represent various different majors. <br />
+        Residents represent numerous student groups such as <br />
+        Association of Taiwanese Students, Next Sustain, Next Make, and Next Act to name a few.
+      </p>
+  </div>
+  <div class="community">
+      <img id="shirePic" src="./images/shirepic.jpg" />
+      <p id="header">community</p>
+      <p>
+        We're a vibrant community of many diverse students from all over the country and the world. <br />
+        Our members have a wide range of interests and represent various different majors. <br />
+        Residents represent numerous student groups such as <br />
+        Association of Taiwanese Students, Next Sustain, Next Make, and Next Act to name a few.
+      </p>
+  </div>
     
 
 
-    <div class="footnote">
-        <address>
-            Written by Raymond Wu and Christopher Womack<br>
-            <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a> &bull; <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a>
-        </address>
-    </div>
+  <div class="footnote">
+      <address>
+        Written by Raymond Wu and Christopher Womack<br>
+        <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a> &bull; <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a>
+      </address>
+  </div>
     
 </body>
 </html>
