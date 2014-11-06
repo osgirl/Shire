@@ -3128,24 +3128,21 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: 1000;
   display: none;
-  float: left;
-  min-width: 160px;
+  /*min-width: 160px;*/
   padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  text-align: left;
+  margin-left: -25px;
+  text-align: center;
   list-style: none;
-  background-color: #31cc5a;
+  background-color: #98E6AC;
   /*-webkit-background-clip: padding-box;
           background-clip: padding-box;*/
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
+  border-bottom:1px solid #049F65;
+  /*border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);*/
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -3163,12 +3160,12 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: white;
+  color: #333;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #333;
+  color: #777;
   text-decoration: none;
   background-color: transparent;
   font-size:bold;
@@ -4061,10 +4058,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow:0 5px 15px 0 black;
-  background:url(./background2.jpg) no-repeat center center fixed;
+  border-bottom:1px solid #049F65;
+  /*box-shadow:0 5px 15px 0 black;*/
+  background:#98E6AC;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   border-bottom-right-radius: 0;
@@ -4103,27 +4099,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   width:100%;
   top:0px;
   margin-top: -3px;
-  background:#27A348;
-  border-bottom-color: #B5CCB6;
+  background:#98E6AC;
+  border-bottom-color: transparent; 
+  /*#B5CCB6; color for bottom border after i learn jQuery*/
   /*box-shadow:0 0 15px black;*/
 }
 .navbar-default .navbar-brand {
-  color: #fff;
+  font-size:1.75em;
+  color: #035F23;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #098202;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+  color: #333;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #777;
   background-color: transparent;
   font-style: bold;
 }

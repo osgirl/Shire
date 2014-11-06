@@ -1,10 +1,10 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$('#shirePic2').hide();
 	$('img').click(function(){
 		$('#shirePic2').fadeIn('slow');
 	})
 })
-/*
+
 $(document).ready(function(){
 	$('#shirePic2').hide();
 	$('img').click(function(){
