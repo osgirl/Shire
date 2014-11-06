@@ -3135,7 +3135,9 @@ tbody.collapse.in {
   margin-left: -25px;
   text-align: center;
   list-style: none;
-  background-color: #98E6AC;
+  background-color: rgba(152, 230, 172, 0.5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
   /*-webkit-background-clip: padding-box;
           background-clip: padding-box;*/
   border-bottom:1px solid #049F65;
@@ -3160,12 +3162,12 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333;
+  color: #fff;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #777;
+  color: #333;
   text-decoration: none;
   background-color: transparent;
   font-size:bold;
@@ -4058,9 +4060,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-bottom:1px solid #049F65;
+  background-color: rgba(152, 230, 172, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+  border-bottom: 1px solid rgba(4, 159, 101, 0.5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   /*box-shadow:0 5px 15px 0 black;*/
-  background:#98E6AC;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   border-bottom-right-radius: 0;

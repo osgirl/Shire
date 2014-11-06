@@ -36,9 +36,7 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="/movies">MOVIES</a></li>
             <li><a href="/contacts">CONTACTS</a></li>
-            <li><a href="#">OTHER STUFF</a></li>
-            <li class="divider"></li>
-            <li><a href="#">MORE STUFF</a></li>
+            <li><a href="#">MISC</a></li>
           </ul>
         </li>
       </ul>
@@ -55,12 +53,24 @@
     <p>Ye Old Shire</p>
   </div>
     
-    <div class="main">
-        <!--<img id="title" src="./images/title.png"/>-->
-        <!--<img id="esplanade" src="./images/esplanade.jpg" width="100%" />-->
-        <img id="shirePic" src="http://jonathanphotos.smugmug.com/7Continents1Photographer/Favorites/i-VJgk7D6/0/X3/Shire%20Hill%20Panorama%20in%20Autumn-X3.jpg" />
-        <!--<img id="shirePic2" src='https://scontent-a.xx.fbcdn.net/hphotos-xfp1/t1.0-9/1374791_10201742025928336_1997009311_n.jpg'>-->
-        <p>The Shire is located in Next House's 4 West wing. We're a vibrant community of many diverse students from all over the country and 
+    <div class="community">
+        <img id="shirePic" src="./images/shirepic.jpg" />
+        <p id="header">community</p>
+        <p>The Shire is comprised of students from all backgrounds, majors and interests.</p>
+    </div>
+    
+
+
+    <div class="footnote">
+        <address>
+            Written by Raymond Wu and Christopher Womack<br>
+            <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a>, <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a>
+        </address>
+    </div>
+    
+</body>
+</html>
+<!--The Shire is located in Next House's 4 West wing. We're a vibrant community of many diverse students from all over the country and 
 the world. Our members have a wide range of interests and majors, such as 
 Course 6, Course 16, Course 7, and Course 20, to name a few. Together, we enjoy 
 playing games (video games, computer games, card games, board games, Korean 
@@ -71,18 +81,4 @@ robotics competitions, programming competitions, Association of Taiwanese
 Students, religious groups, musical groups, sports, and Next Sustain (a Next 
 House student group focused on environmental issues at the dorm), among 
 others. Most of us really enjoy just hanging around, but we also like engaging in 
-shenanigans from time to time.</p>
-
-    </div>
-    
-
-
-    <div class="footnote">
-        <address>
-            Written by Raymond Wu and Christopher Womack<br>
-            Contact Us: <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a>, <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a>
-        </address>
-    </div>
-    
-</body>
-</html>
+shenanigans from time to time.-->
