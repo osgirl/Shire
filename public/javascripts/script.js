@@ -24,6 +24,14 @@ $(document).ready(function(){
 		$(".dropdown-menu").css({"display":"none"});
 	})
 	//$('#dropdownRAYRAY').hover()
+	$(window).scroll(function(){
+		if ($(window).scrollTop()>0){
+			$(".navbar").css({"box-shadow":"0px 0px 5px"});
+		}
+		else {
+			$(".navbar").css({"box-shadow":"0px 0px 0px"});
+		}
+	})
 })
 
 //		$(".dropbdown-menu").css({"display":"inline-block"});
