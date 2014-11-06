@@ -8,8 +8,8 @@
     <script src="./libs/d3.v3.min.js"></script>
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
-    <script src='./javascripts/script.js'></script>    
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src='./javascripts/script.js'></script>    
 
 </head>
 <body>
@@ -31,7 +31,7 @@
       <ul class="nav navbar-nav">
         <li><a href="/events">EVENTS</a></li>
         <li><a href="/photos">PHOTOS</a></li>
-        <li class="dropdown">
+        <li class="dropdown" id="dropdownRAYRAY">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER</a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="/movies">MOVIES</a></li>
