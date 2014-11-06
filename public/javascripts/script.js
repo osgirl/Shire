@@ -25,12 +25,21 @@ $(document).ready(function(){
 	})
 	//$('#dropdownRAYRAY').hover()
 	$(window).scroll(function(){
-		if ($(window).scrollTop()>0){
-			$(".navbar").css({"box-shadow":"0px 0px 5px"});
+		if ($(window).scrollTop()>110){
+			$(".navbar").css({"box-shadow":"0px 0px 10px"});
 		}
 		else {
 			$(".navbar").css({"box-shadow":"0px 0px 0px"});
 		}
+		if ($(window).scrollTop()>110){
+			$(".navbar").css({"background-color":"#98E6AC"});
+		}
+		else {
+			$(".navbar").css({"background-color":"transparent"});
+		}
+	})
+	$(window).scroll(function(){
+		console.log($(window).scrollTop());
 	})
 })
 
