@@ -21,23 +21,18 @@ body{
     color:#035F23;
 }
 
-.community{
+.diversity{
     position:relative;
-    /*height:1000px;*/
     width:100%;
     margin-left:auto;
     margin-right:auto;
-    margin-top:10px;
     background: -webkit-linear-gradient(left, #4BCF25 , #1C9B48); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, #4BCF25, #1C9B48); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, #4BCF25, #1C9B48); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, #4BCF25 , #1C9B48); /* Standard syntax */
-    border-top: 4px solid #049F65;
-    border-bottom: 4px solid #049F65;
     padding-bottom: 20px;
-    /*box-shadow:0 0 15px black;*/
 }
-.community #welcome{
+.diversity #welcome{
     position:relative;
     padding-top:20px;
     font-size:65px;
@@ -46,17 +41,15 @@ body{
 }
 
 
-.community #shirePic{
+.diversity #shirePic{
     position:relative;
-    /*box-shadow:0 0 5px black;*/
     display:block;
     width:100%;
-    /*border:1px solid gray;*/
-    margin-left:auto;
-    margin-right:auto;
+    border-top: 4px solid #049F65;
+    border-bottom: 4px solid #049F65;
 }
 
-.community #header{
+.diversity #header{
     text-align: center;
     font-size: 3em;
     font-weight: bold;
@@ -64,7 +57,7 @@ body{
     margin-bottom: 5px;
 }
 
-.community p{
+.diversity p{
     margin:auto;
     text-align:center;
     font-size:1.25em;

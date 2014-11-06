@@ -50,12 +50,12 @@
 </nav>
 
   <div class="welcome">
-    <p>Ye Old Shire</p>
+    <p>Ye Olde Shire</p>
   </div>
     
-    <div class="community">
+    <div class="diversity">
         <img id="shirePic" src="./images/shirepic.jpg" />
-        <p id="header">community</p>
+        <p id="header">diversity</p>
         <p>
           We're a vibrant community of many diverse students from all over the country and the world. <br />
           Our members have a wide range of interests and represent various different majors. <br />
