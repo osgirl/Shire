@@ -76,13 +76,8 @@
       <p>
 
       </p>
+      <img class="pic" id="festivePic" src="./images/festivity.jpg" />
   </div>
-
-  <!--<div id="festivePic">
-    <img src="./images/skittles.jpg" />
-    <img src="./images/massage.jpg" />
-    <img src="./images/lindsey.jpg" />
-  </div>-->
 
   <div class="footnote">
       <address>
