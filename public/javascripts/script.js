@@ -38,9 +38,9 @@ $(document).ready(function(){
 			$(".navbar").css({"background-color":"transparent"});
 		}
 	})
-	$(window).scroll(function(){
-		console.log($(window).scrollTop());
-	})
+	// $(window).scroll(function(){
+	// 	console.log($(window).scrollTop());
+	// })
 })
 
 //		$(".dropbdown-menu").css({"display":"inline-block"});
