@@ -1,5 +1,9 @@
+var express = require('express');
+var router = express.Router();
 
-exports.index = function(req,res,next){
-    res.render('contacts',{title:'Shire'});
-    res.end();
-}
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('contacts');
+});
+
+module.exports = router;

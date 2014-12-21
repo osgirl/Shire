@@ -1,95 +1,71 @@
 var express = require('express');
-var http = require('http');
 var path = require('path');
-var favicon = require('static-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var url = require('url');
-var querystring = require('querystring');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
 
-// var mongodb = require('mongodb');
-// var mongoose = require('mongoose');
-// mongoose.connect('localhost', 'test');
-
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function callback() {
-//   console.log('Connected to DB');
-// });
-
-
-var users = require('./routes/user');
+var routes = require('./routes/index');
 var contacts = require('./routes/contacts');
 var login = require('./routes/login');
+var events = require('./routes/events');
+var movies = require('./routes/movies');
+var photos = require('./routes/photos');
+var users = require('./routes/users');
+
 var app = express();
 
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hjs');
-app.set('port',process.env.PORT || 8000)
-app.use(favicon());
+app.set('view engine', 'ejs');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(app.router);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/users', users.list);
-app.get('/contacts',contacts.index);
-app.get('/login',login.index);
+app.use('/', routes);
+app.use('/home',routes);
+app.use('/contacts',contacts);
+app.use('/login',login);
+app.use('/events',events);
+app.use('/movies',movies);
+app.use('/photos',photos);
+app.use('/users', users);
 
-
-
-//app.get('/', routes.index);
-
-/// catch 404 and forwarding to error handler
+// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
-/// error handlers
+// error handlers
 
 // development error handler
 // will print stacktrace
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
 
 // production error handler
 // no stacktraces leaked to user
-// view engine setup
-
-
-app.get('/',function(req,res,next){
-    res.render('index',{title:'Shire'});
-    res.end();
-})
-app.get('/home',function(req,res,next){
-    res.render('index',{title:'Shire'});
-    res.end();
-})
-app.get('/events',function(req,res,next){
-    res.render('events',{title:'Shire'});
-    res.end();
-})
-
-app.get('/movies',function(req,res,next){
-    res.render('movies',{title:'Shire'});
-    res.end();
-})
-app.get('/photos',function(req,res,next){
-    res.render('photos',{title:'Shire'});
-    res.end();
-})
-
-app.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/home');
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
 });
 
-http.createServer(app).listen(app.get('port'),function(){
-    console.log('Express server listening on port '+app.get('port'));
-});
 
 module.exports = app;

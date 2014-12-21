@@ -25,16 +25,17 @@ $(document).ready(function(){
 	})
 	//$('#dropdownRAYRAY').hover()
 	$(window).scroll(function(){
-		if ($(window).scrollTop()>110){
+		if ($(window).scrollTop()>150){
 			$(".navbar").css({"box-shadow":"0px 0px 10px"});
+			$(".navbar").css({"background-color":"rgb(152,230,172,1)"});
+		}
+		else if ($(window).scrollTop()>=100 && $(window).scrollTop()<=150){
+			scrollDifference = $(window).scrollTop()-100;
+			$(".navbar").css({"box-shadow":"0px 0px "+scrollDifference/5.0+"px"});
+			$(".navbar").css({"background-color":"rgb(152,230,172,"+scrollDifference/50.0+")"});
 		}
 		else {
 			$(".navbar").css({"box-shadow":"0px 0px 0px"});
-		}
-		if ($(window).scrollTop()>110){
-			$(".navbar").css({"background-color":"#98E6AC"});
-		}
-		else {
 			$(".navbar").css({"background-color":"transparent"});
 		}
 	})
