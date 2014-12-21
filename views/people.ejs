@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel='stylesheet' type="text/css" href='./style.css'/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+    <script src="./libs/d3.v3.min.js"></script>
+    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+    <script src="./libs/jquery-ui.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src='./javascripts/script.js'></script>    
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home">SHIRE</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/events">EVENTS</a></li>
+        <li><a href="/photos">PHOTOS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/movies">MOVIES</a></li>
+            <li><a href="/people">PEOPLE</a></li>
+            <li><a href="#">MISC</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login">LOGIN</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="welcome">
+  <p>Hobbits</p>
+</div>
+
+<div class="people">
+  <table class="people_table">
+
+    <tr class="first_row">
+      <th>Pic?</th>
+      <th>Name?</th>
+      <th>Course Number?</th>
+      <th>Kerberos?</th>
+      <th>Bio? (idk)</th>
+      <th>Random?</th>
+    </tr>
+<!--
+    <tr>
+      <td><div><img class="peeps" src="./images/shire_people/raymond.jpg"></div></td>
+      <td>Raymond Wu</td>
+      <td>6-3</td>
+      <td>raywu22</td>
+      <td>Sexy Beast</td>
+      <td>i like sushi ._.</td>
+    </tr>
+
+    <tr>
+      <td><div><img class="peeps" src="./images/shire_people/sophie.jpg"></div></td>
+      <td>Keiko (Sophocles) Mori</td>
+      <td>Something</td>
+      <td>Something</td>
+      <td>Something</td>
+      <td>Something</td>
+    </tr>
+-->
+    <% for (var name in shirePeople){ %>
+      <tr>
+        <td><div><img class="peeps" src="./images/shire_people/<%=name%>.jpg"></div></td>
+        <% for (var category in shirePeople[name]) {%>
+        <td><%= shirePeople[name][category] %></td>
+        <% } %>
+      </tr>
+    <% } %>
+
+  </table>
+</div>
+
+    
+</body>
+</html>
