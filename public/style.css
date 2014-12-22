@@ -118,12 +118,12 @@ address a:hover{
 
 
 
-/*-----------------------------------------------------
+/*---------------------------------------------------------------------------------
 people */
 
 .peeps{
-    height:100px;
-    width:150px;
+  height:100px;
+  width:150px;
 }
 
 .first_row > th {
@@ -145,4 +145,22 @@ people */
   background: #98E6AC;
 }
 
+/*---------------------------------------------------------------------------------
+login */
 
+.login_form {
+    height:60px;
+    width:150px;
+    margin-top: 10px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_form2 {
+    height:60px;
+    width:150px;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
