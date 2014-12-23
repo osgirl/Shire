@@ -7,12 +7,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 
-// mongoose.connect('mongodb://localhost/shire');
-// var db = mongoose.connection;
-// db.on('error',console.error.bind(console,'connection error:'));
-// db.once('open',function(callback){
-// 	console.log("Connected to database!");
-// })
+mongoose.connect('mongodb://localhost/shire');
+var db = mongoose.connection;
+db.on('error',console.error.bind(console,'connection error:'));
+db.once('open',function(callback){
+	console.log("Connected to database!");
+})
 
 var routes = require('./routes/index');
 var people = require('./routes/people');
