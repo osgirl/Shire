@@ -4,6 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var session = require('express-session');
+
+// mongoose.connect('mongodb://localhost/shire');
+// var db = mongoose.connection;
+// db.on('error',console.error.bind(console,'connection error:'));
+// db.once('open',function(callback){
+// 	console.log("yay!!!!!");
+// })
 
 var routes = require('./routes/index');
 var people = require('./routes/people');
@@ -14,7 +23,6 @@ var photos = require('./routes/photos');
 var users = require('./routes/users');
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -26,7 +34,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({secret: 'blahblah', 
+                 saveUninitialized: true,
+                 resave: true}));
 app.use('/', routes);
 app.use('/home',routes);
 app.use('/people',people);

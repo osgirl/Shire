@@ -163,4 +163,16 @@ login */
     margin-top:10px;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom:200px;
+}
+
+.logout {
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    width:50px;
+}
+
+.mySubmit {
+    margin-top:10px;
 }

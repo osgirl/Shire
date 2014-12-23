@@ -4,10 +4,16 @@ var shirePeople = require('../shire_peeps.json');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  //console.log(shirePeople);
-  res.render('people',{title:"people",
-						shirePeople:shirePeople});
-  res.end();
+
+	req.session.currentUser = true;
+	if (!req.session.currentUser){
+		res.redirect('/login');	
+	}
+	else {
+		res.render('people',{title:"people",
+						shirePeople:shirePeople});  
+	}
+
 });
 
 module.exports = router;
