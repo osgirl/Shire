@@ -12,9 +12,6 @@ $(document).ready(function(){
 	})
 })
 */
-$('body').click(function(){
-	console.log("jfsdkjfksdj")
-})
 
 $(document).ready(function(){
 	$(".dropdown").hover(function(){

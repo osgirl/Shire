@@ -8,7 +8,7 @@
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src='./javascripts/script.js'></script>    
+    <script src='./javascripts/eventsScript.js'></script>    
 
 </head>
 <body>
@@ -48,8 +48,41 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-    
+<div class="welcome">
+  <p>Events</p>
+</div>
 
+<!--soon to be removed-->
+<div class="event-outer">
+  <h2 class="event-title">Raymond's Birthday</h2>
+  <h4 class="event-description">Celebrating his birthday because he's awesome, also this div will be removed soon because it is not dynamic... it's just a placeholder for now</h4>
+  <input class="mySubmit" id="event-delete" type="submit" value="Delete" /> 
+  <div class="event-table-outer">
+    <div class="event-info">
+      <p class="event-where">Where: Raymond's house</p>
+      <p class="event-when">When: Today</p>
+    </div>
+    <div class="meet-info">
+      <p class="meet-where">Meeting where: TFL</p>
+      <p class="meet-when">Meeting when: Midnight</p>
+    </div>
+  </div>
+</div>
+
+<div class="event-all">
+</div>
+
+<div class="add-event">
+  <form id="add-event-form" action="events/add_event" method="post"> 
+    Title: <input type="text" name="title" /> 
+    Description: <input type="text" name="description"/> 
+    Where: <input type="text" name="event-where"/>
+    When: <input type="text" name="event-when"/> 
+    Meeting where: <input type="text" name="meet-where"/> 
+    Meeting when: <input type="text" name="meet-when"/> 
+    <input class="mySubmit" type="submit" value="Add Event" /> 
+  </form>
+</div>
     
 </body>
 </html>
