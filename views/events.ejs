@@ -8,6 +8,7 @@
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src='./javascripts/script.js'></script>
     <script src='./javascripts/eventsScript.js'></script>    
 
 </head>
@@ -51,15 +52,35 @@
 <div class="welcome">
   <p>Events</p>
 </div>
-
-<!--soon to be removed-->
+<% for (i in events){%>
 <div class="event-outer">
+  <h2 class="event-title"><%=events[i].title%></h2>
+  <h4 class="event-description"><%=events[i].description%></h4>
+  <form action="events/deleteEvent" method="post">
+  <input type="hidden" name="eventID" value="<%=events[i]._id%>">
+  <input class="mySubmit" id="event-delete" type="submit" value="Delete" /> 
+  </form>
+  <div class="event-table-outer">
+    <div class="event-info">
+      <p class="eventWhere"><%=events[i].eventWhere%></p>
+      <p class="event-when"><%=events[i].eventWhen%></p>
+    </div>
+    <div class="meet-info">
+      <p class="meet-where"><%=events[i].meetWhere%></p>
+      <p class="meet-when"><%=events[i].meetWhen%></p>
+    </div>
+  </div>
+</div>
+<%}%>
+
+
+<!-- <div class="event-outer">
   <h2 class="event-title">Raymond's Birthday</h2>
   <h4 class="event-description">Celebrating his birthday because he's awesome, also this div will be removed soon because it is not dynamic... it's just a placeholder for now</h4>
   <input class="mySubmit" id="event-delete" type="submit" value="Delete" /> 
   <div class="event-table-outer">
     <div class="event-info">
-      <p class="event-where">Where: Raymond's house</p>
+      <p class="eventWhere">Where: Raymond's house</p>
       <p class="event-when">When: Today</p>
     </div>
     <div class="meet-info">
@@ -67,7 +88,7 @@
       <p class="meet-when">Meeting when: Midnight</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <div id="event-all">
 </div>
@@ -76,10 +97,10 @@
   <form id="add-event-form" action="events/add_event" method="post"> 
     Title: <input type="text" name="title" /> 
     Description: <input type="text" name="description"/> 
-    Where: <input type="text" name="event-where"/>
-    When: <input type="text" name="event-when"/> 
-    Meeting where: <input type="text" name="meet-where"/> 
-    Meeting when: <input type="text" name="meet-when"/> 
+    Where: <input type="text" name="eventWhere"/>
+    When: <input type="text" name="eventWhen"/> 
+    Meeting where: <input type="text" name="meetWhere"/> 
+    Meeting when: <input type="text" name="meetWhen"/> 
     <input class="mySubmit" type="submit" value="Add Event" /> 
   </form>
 </div>
