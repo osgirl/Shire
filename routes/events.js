@@ -38,7 +38,7 @@ router.post('/add_event',function(req,res){
 })
 
 router.post('/deleteEvent',function(req,res){
-	eventsModel.findOneAndRemove({eventID:req.body._id},function(){
+	eventsModel.findOneAndRemove({title:req.body.title},function(){
 	});
 	res.redirect('/events');
 })

@@ -15,6 +15,7 @@ db.once('open',function(callback){
 })
 
 var routes = require('./routes/index');
+var history = require('./routes/history');
 var people = require('./routes/people');
 var login = require('./routes/login');
 var events = require('./routes/events');
@@ -39,6 +40,7 @@ app.use(session({secret: 'blahblah',
                  resave: true}));
 app.use('/', routes);
 app.use('/home',routes);
+app.use('/history',history);
 app.use('/people',people);
 app.use('/login',login);
 app.use('/events',events);

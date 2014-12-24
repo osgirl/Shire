@@ -3,23 +3,156 @@
 		"Name":"Raymond Wu",
 		"Course Number":"6-3",
 		"Kerberos":"raywu22",
-		"Bio":"Sexy Beast",
-		"Random":"I like sushi ._."
+		"Bio":"One of the creators of the shire website. I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour)."
 	},
-	
 	"sophie": {
 		"Name":"Sophocles Mori",
 		"Course Number":"6-3, 24",
 		"Kerberos":"ksmori",
-		"Bio":"somewhat less sexy beast",
-		"Random":"also likes sushi"
+		"Bio":"hi im sophie mori"
 	},
-
 	"chrisWomack": {
 		"Name":"Chris Womack",
 		"Course Number":"6-3, 15",
 		"Kerberos":"cwwomack",
-		"Bio":"even less sexy beast",
-		"Random":"enjoys bad british accents, also i don't remember your spirit animal"
+		"Bio":"hi im chris womack"
+	},
+	"identifier": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier1": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier2": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier3": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier4": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier5": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier6": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier7": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier8": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier9": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier10": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier11": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier12": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier13": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier14": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier15": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier16": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier17": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier18": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier19": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier20": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier21": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
+	},
+	"identifier22": {
+		"Name":"put your name here",
+		"Course Number":"put course numbers here",
+		"Kerberos": "put kerberos here",
+		"Bio":"put bio here"
 	}
 }

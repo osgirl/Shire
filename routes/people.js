@@ -5,7 +5,7 @@ var shirePeople = require('../shire_peeps.json');
 /* GET home page. */
 router.get('/', function(req, res) {
 
-	//req.session.currentUser = true;
+	req.session.currentUser = true;
 	if (!req.session.currentUser){
 		res.redirect('/login');	
 	}

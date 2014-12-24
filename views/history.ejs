@@ -8,8 +8,7 @@
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src='./javascripts/script.js'></script>
-    <script src='./javascripts/eventsScript.js'></script>    
+    <script src='./javascripts/script.js'></script>    
 
 </head>
 <body>
@@ -49,46 +48,8 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+    
 
-<div class="welcome">
-  <p>Events</p>
-</div>
-<% for (i in events){%>
-<div class="event-outer">
-  <h2 class="event-title"><%=events[i].title%></h2>
-  <h4 class="event-description"><%=events[i].description%></h4>
-  <form action="events/deleteEvent" method="post">
-  <input type="hidden" name="title" value="<%=events[i].title%>">
-  <input class="mySubmit" id="event-delete" type="submit" value="Delete" /> 
-  </form>
-  <div class="event-table-outer">
-    <div class="event-info">
-      <p class="eventWhere">Event Where: <%=events[i].eventWhere%></p>
-      <p class="event-when">Event When: <%=events[i].eventWhen%></p>
-    </div>
-    <div class="meet-info">
-      <p class="meet-where">Meet Where: <%=events[i].meetWhere%></p>
-      <p class="meet-when">Meet When: <%=events[i].meetWhen%></p>
-    </div>
-  </div>
-</div>
-<%}%>
-
-
-<div id="event-all">
-</div>
-
-<div class="add-event">
-  <form id="add-event-form" action="events/add_event" method="post"> 
-    Title: <input type="text" name="title" /> 
-    Description: <input type="text" name="description"/> 
-    Event Where: <input type="text" name="eventWhere"/>
-    Event When: <input type="text" name="eventWhen"/> 
-    Meeting where: <input type="text" name="meetWhere"/> 
-    Meeting when: <input type="text" name="meetWhen"/> 
-    <input class="mySubmit" type="submit" value="Add Event" /> 
-  </form>
-</div>
     
 </body>
 </html>
