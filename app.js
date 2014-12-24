@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 
-mongoose.connect('mongodb://localhost/shire');
+mongoose.connect('mongodb://heroku_app32772110:7qjr21sthg4aln2u4psmi3ft3g@ds047020.mongolab.com:47020/heroku_app32772110/shire');
 var db = mongoose.connection;
 db.on('error',console.error.bind(console,'connection error:'));
 db.once('open',function(callback){
