@@ -25,12 +25,12 @@ router.post('/login_user', function(req,res,next){
 				res.redirect('/');
 			}
 			else {
-				res.send('Incorrect password or username not found');
+				res.redirect('/login');
 			}
 		})
 	}
 	else {
-		res.send('Invalid inputs');
+		res.redirect('/login');
 	}
 	//console.log(!req.session.currentUser);
 	//res.redirect('/');
