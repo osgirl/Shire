@@ -12,7 +12,7 @@ var loginModel = mongoose.model("login",loginSchema);
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('login');
+  res.render('login',{message:""});
 });
 
 router.post('/login_user', function(req,res,next){

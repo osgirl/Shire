@@ -209,6 +209,21 @@ login */
     margin-top:10px;
 }
 
+#loginMessage {
+    width:100px;
+    height:25px;
+    text-align:center;
+    position:fixed;
+    top:20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color:red;
+    color:white;
+    border:1px solid;
+    border-color:white;
+    z-index:1337;
+}
+
 /*---------------------------------------------------------------------------------
 events */
 
@@ -251,7 +266,6 @@ photos */
 
 .photosContainer {
     display:table;
-    width:600px;
 /*    border:5px solid;
     border-color:black;*/
     margin-right:auto;
@@ -260,8 +274,8 @@ photos */
 
 .imageRow {
     display:table-row;
-    width:600px;
-    height:200px;
+    width:800px;
+    height:150px;
     border:5px solid;
     border-color:white;
     padding:5px;
@@ -269,7 +283,7 @@ photos */
 
 .imageBound {
     display:table-cell;
-    height:200px;
+    height:150px;
     width:200px;
     border:5px solid;
     border-color:white;
@@ -278,7 +292,7 @@ photos */
 
 .photosPicSmall {
     width:200px;
-    height:200px;
+    height:150px;
     margin:0 auto;
 }
 
@@ -308,4 +322,23 @@ photos */
     top:0px;
     left:0px;
     z-index:13;
+}
+
+#urlAdd-container {
+    width:150px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:50px;
+}
+
+.smallSubmit {
+    font-size:10px;
+    text-align:center;
+    height:20px;
+    width:20px;
+    position:absolute;
+    z-index:2;
+    background-color:#C00000;
+    border:1px solid;
+    border-color:white;
 }

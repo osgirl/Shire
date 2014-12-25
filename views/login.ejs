@@ -49,6 +49,12 @@
     </div><!-- /.container-fluid -->
   </nav>
 
+  <%if (message.length!=0){%>
+  <div id="loginMessage">
+    <p><%=message%></p>
+  </div>
+  <%}%>
+
   <div class="welcome">
     <p>Login</p>
   </div>

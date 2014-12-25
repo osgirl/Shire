@@ -54,7 +54,33 @@
     <p>Photos</p>
   </div>
 
+
+  <div id="urlAdd-container">
+    <form id="urlAdd" action="photos/urlAdd" method="post">
+      <label>Add photo from url</label>
+      <input type="text" name="toAddUrl"/>
+      <input class="mySubmit" type="submit" value="submit"/>
+    </form>
+  </div>
+
   <div class="photosContainer">
+    <%for (var i=0;i<Math.floor(allUrlPhotos.length/4)+1;i++){%>
+      <div class="imageRow">
+        <%for (var j=i*4;j<Math.min(i*4+4,allUrlPhotos.length);j++){%>
+          <div class="imageBound" style="width:200px">
+            <form action="photos/deletePhoto" method="post">
+            <input type="hidden" name="photoUrl" value="<%=allUrlPhotos[j].photoUrl%>">
+            <input class="smallSubmit" type="submit" value="X"/>
+            <img class="photosPicSmall" src="<%=allUrlPhotos[j].photoUrl%>">
+            </form>
+          </div>
+        <%}%>
+      </div>
+    <%}%>
+  </div>
+
+
+<!--   <div class="photosContainer">
     <div class="imageRow">
 
       <div class="imageBound">
@@ -81,7 +107,7 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <div id="overlay">
   </div>

@@ -43,4 +43,6 @@ router.post('/deleteEvent',function(req,res){
 	res.redirect('/events');
 })
 
+
+
 module.exports = router;

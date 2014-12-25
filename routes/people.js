@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
 
 	//req.session.currentUser = true;
 	if (!req.session.currentUser){
-		res.redirect('/login');
+		res.render('login',{message:"please log in"});
 	}
 	else {
 		res.render('people',{title:"people",
