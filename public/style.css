@@ -261,7 +261,7 @@ photos */
 .imageRow {
     display:table-row;
     width:600px;
-    height:150px;
+    height:200px;
     border:5px solid;
     border-color:white;
     padding:5px;
@@ -269,16 +269,21 @@ photos */
 
 .imageBound {
     display:table-cell;
-    height:150px;
-    width:150px;
+    height:200px;
+    width:200px;
     border:5px solid;
     border-color:white;
+    background-color:black;
 }
 
 .photosPicSmall {
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
     margin:0 auto;
+}
+
+.photosPicSmall:hover {
+    opacity: .8;
 }
 
 .photosPicBig {
@@ -287,7 +292,6 @@ photos */
     right:5%;
     top:5%;
     width:90%;
-    
     z-index:22;
 }
 
