@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$(".photosPicSmall").click(function(){
+		$("#overlay").addClass("photosCoverVisible");
+		$(this).removeClass("photosPicSmall").addClass("photosPicBig")
+	})
+	$("#overlay").on("click",function(){
+		$(this).removeClass("photosCoverVisible");
+		$(".photosPicBig").removeClass("photosPicBig").addClass("photosPicSmall");
+	})
+})
