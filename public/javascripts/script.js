@@ -39,7 +39,6 @@ $(document).ready(function(){
 	// $(window).scroll(function(){
 	// 	console.log($(window).scrollTop());
 	// })
-	console.log(shuffle(10));
 })
 
 function shuffle(shireObject) {

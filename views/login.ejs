@@ -9,7 +9,7 @@
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <script src='./javascripts/script.js'></script>  
-
+    <script src="./javascripts/loginScript.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-default" role="navigation">
@@ -55,16 +55,17 @@
   </div>
   <%}%>
 
+<%if (!isLoggedIn){%>
   <div class="welcome">
     <p>Login</p>
   </div>
-
-
   <div class="login_form">
-    <form id="myForm" action="login/login_user" method="post"> 
-      User: <input type="text" name="user" /> 
-      Password: <input type="password" name="password"/> 
-      <input class="mySubmit" type="submit" value="Submit" /> 
+    <form id="loginForm" action="login/login_user" method="post"> 
+      <label>User:</label> 
+      <input type="text" name="user" /> 
+      <label>Password:</label>
+      <input type="password" name="password"/> 
+      <input id="login_submit" class="mySubmit" type="submit" value="Submit" /> 
     </form>
   </div>
 
@@ -74,13 +75,17 @@
 
   <div class="login_form2">
     <form id="myForm" action="login/new_user" method="post"> 
-      User: <input type="text" name="user" /> 
-      Password: <input type="password" name="password"/> 
-      What's my favorite color? <input type="text" name="secret" /> 
+      <label>User:</label>
+      <input type="text" name="user" /> 
+      <label>Password:</label>
+      <input type="password" name="password"/> 
+      <label>What's Raymond's favorite color?</label>
+      <input type="text" name="secret" /> 
       <input class="mySubmit" type="submit" value="Submit" /> 
     </form>
   </div>
-
+<%}%>
+<%if (isLoggedIn){%>
   <div class="welcome">
     <p>Logout</p>
   </div>
@@ -90,6 +95,6 @@
       <input class="mySubmit" type="submit" value="Logout" /> 
     </form>
   </div>
-
+<%}%>
 </body>
 </html>

@@ -12,7 +12,8 @@ var photoAddUrlModel = mongoose.model("photoUrl",photoAddUrlSchema);
 router.get('/', function(req, res) {
 	//req.session.currentUser=true;
 	if (!req.session.currentUser){
-		res.render('login',{message:"please log in"});
+		res.render('login',{message:"please log in",
+							isLoggedIn:false});
 	}
 	else {
 		photoAddUrlModel.find(function(error,allPhotoUrls){
@@ -27,7 +28,6 @@ router.post('/urlAdd',function(req,res){
 		var newPhotoUrl = new photoAddUrlModel({
 			photoUrl: req.body.toAddUrl.toString()
 		})
-		console.log(newPhotoUrl);
 		newPhotoUrl.save(function(error){
 			if (error){
 				return handleError(error);

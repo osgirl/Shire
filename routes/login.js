@@ -12,7 +12,14 @@ var loginModel = mongoose.model("login",loginSchema);
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('login',{message:""});
+	if (!req.session.currentUser){
+		res.render('login',{message:"",
+							isLoggedIn:false});
+	}
+	else {
+		res.render('login',{message:"",
+							isLoggedIn:true});
+	}
 });
 
 router.post('/login_user', function(req,res,next){
@@ -20,17 +27,20 @@ router.post('/login_user', function(req,res,next){
 	var emptyUserAndPassword = req.body.user.length<1 && req.body.password.length<1
 	if (!req.session.currentUser && !emptyUserAndPassword){
 		loginModel.findOne({user:req.body.user},function(error,users){
-			if (users.password===req.body.password){
+			if (users===null){
+				res.send('Username not found');
+			}
+			else if (users.password===req.body.password){
 				req.session.currentUser = req.body.user;
 				res.redirect('/');
 			}
 			else {
-				res.redirect('/login');
+				res.send("Incorrect password");
 			}
 		})
 	}
 	else {
-		res.redirect('/login');
+		res.send('Invalid inputs');
 	}
 	//console.log(!req.session.currentUser);
 	//res.redirect('/');
@@ -55,7 +65,7 @@ router.post('/new_user',function(req,res,next){
 			}
 
 			if (hasUserName){
-				res.send("Already has that username");				
+				res.redirect('/login');
 			}
 			else {
 				newUser.save(function(error){
@@ -69,7 +79,7 @@ router.post('/new_user',function(req,res,next){
 		});
 	}
 	else {
-		res.redirect("/login");
+		res.send("That's not my favorite color!")
 	}
 });
 

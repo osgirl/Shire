@@ -3,55 +3,55 @@
 		"Name":"Raymond Wu",
 		"Course Number":"6-3",
 		"Kerberos":"raywu22",
-		"Bio":"One of the creators of the shire website. I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour)."
+		"Bio":"One of the creators of the shire website, I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour)."
 	},
 	"sophie": {
-		"Name":"Sophocles Mori",
+		"Name":"Sophie Mori",
 		"Course Number":"6-3, 24",
 		"Kerberos":"ksmori",
-		"Bio":"hi im sophie mori"
+		"Bio":"hi im sophie mori this is my example bio"
 	},
 	"chrisWomack": {
 		"Name":"Chris Womack",
 		"Course Number":"6-3, 15",
 		"Kerberos":"cwwomack",
-		"Bio":"hi im chris womack"
+		"Bio":"hi im chris womack this is my example bio"
 	},
-	"identifier": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"travis": {
+		"Name":"Travis Libsack",
+		"Course Number":"Course 2",
+		"Kerberos": "libsackt",
+		"Bio":"bio"
 	},
-	"identifier1": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"Josh": {
+		"Name":"Joshua Millings",
+		"Course Number":"8",
+		"Kerberos": "millings",
+		"Bio":"Hi, I'm Josh, Welcome to my bio!"
 	},
-	"identifier2": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"EricF": {
+		"Name":"Eric Fegan",
+		"Course Number":"18C",
+		"Kerberos": "ejfegan",
+		"Bio":"Well, you found me. Congratulations. But was it worth it?"
 	},
-	"identifier3": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"Caralyn": {
+		"Name":"Caralyn Cutlip",
+		"Course Number":"???",
+		"Kerberos": "caralyn",
+		"Bio":"Born a poor street urchin, I quickly learned that, while most believe in ‘only the strong survive,’ a more accurate idiom is ‘only the really really ridiculously good looking survive.’ This mantra has carried me through my life, from the pits of Moria, to the heights of the Misty Mountains. But most importantly, after years of clawing my way up the ladders of success and procrastination, it’s led me here, to the Shire, to my new home."
 	},
-	"identifier4": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"Ale": { 
+		"Name":"Alejandro Krauskopf",
+		"Course Number":"10B",
+		"Kerberos": "alekraus",
+		"Bio":"I’ll think of something soon"
 	},
-	"identifier5": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"Jacky ": {
+		"Name":"Jacqueline  Nava",
+		"Course Number":"16",
+		"Kerberos": "jnava111",
+		"Bio":"I like planes and boba."
 	},
 	"identifier6": {
 		"Name":"put your name here",

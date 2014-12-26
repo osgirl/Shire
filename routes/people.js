@@ -7,7 +7,8 @@ router.get('/', function(req, res) {
 
 	//req.session.currentUser = true;
 	if (!req.session.currentUser){
-		res.render('login',{message:"please log in"});
+		res.render('login',{message:"please log in",
+							isLoggedIn:false});
 	}
 	else {
 		res.render('people',{title:"people",
