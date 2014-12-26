@@ -38,9 +38,15 @@ router.post('/add_event',function(req,res){
 })
 
 router.post('/deleteEvent',function(req,res){
-	eventsModel.findOneAndRemove({title:req.body.title},function(){
-	});
-	res.redirect('/events');
+	if (!req.session.currentUser){
+		res.send("please login");
+	}
+	else {
+		eventsModel.findOneAndRemove({title:req.body.title},function(){
+		});
+		res.redirect('/events');
+	}
+
 })
 
 

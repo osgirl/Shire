@@ -32,7 +32,7 @@ router.post('/login_user', function(req,res,next){
 			}
 			else if (users.password===req.body.password){
 				req.session.currentUser = req.body.user;
-				res.redirect('/');
+				res.send("loginSuccessful");
 			}
 			else {
 				res.send("Incorrect password");
@@ -65,7 +65,7 @@ router.post('/new_user',function(req,res,next){
 			}
 
 			if (hasUserName){
-				res.redirect('/login');
+				res.send("Username already exists");
 			}
 			else {
 				newUser.save(function(error){
@@ -74,12 +74,12 @@ router.post('/new_user',function(req,res,next){
 					}
 				})
 				req.session.currentUser = req.body.user;
-				res.redirect("/");
+				res.send("loginSuccessful");
 			}
 		});
 	}
 	else {
-		res.send("That's not my favorite color!")
+		res.send("That's not my favorite color!");
 	}
 });
 

@@ -38,6 +38,7 @@ router.post('/urlAdd',function(req,res){
 })
 
 router.post('/deletePhoto',function(req,res){
+
 	photoAddUrlModel.findOneAndRemove({photoUrl:req.body.photoUrl},function(){
 	});
 	res.redirect('/photos');
