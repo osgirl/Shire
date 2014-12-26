@@ -47,17 +47,17 @@
 		"Kerberos": "alekraus",
 		"Bio":"I’ll think of something soon"
 	},
-	"Jacky ": {
+	"Jacky": {
 		"Name":"Jacqueline  Nava",
 		"Course Number":"16",
 		"Kerberos": "jnava111",
 		"Bio":"I like planes and boba."
 	},
-	"identifier6": {
-		"Name":"put your name here",
-		"Course Number":"put course numbers here",
-		"Kerberos": "put kerberos here",
-		"Bio":"put bio here"
+	"EricB": {
+		"Name":"Eric Bartell",
+		"Course Number":"6-7", 
+		"Kerberos": "ebartell", 
+		"Bio":"Bio(logy). I also enjoy Comp Sci, Lacrosse, and hanging with the halflings of this here shire."
 	},
 	"identifier7": {
 		"Name":"put your name here",
