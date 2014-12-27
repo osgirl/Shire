@@ -394,3 +394,46 @@ movies */
 #add-movies-form {
     width:100px;
 }
+
+/*---------------------------------------------------------------------------------
+history */
+
+.history-pic-container {
+    height:500px;
+    width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.history-pic {
+    height:500px;
+    width:700px;
+}
+
+.history-words-container{
+    margin-top:10px;
+    display:block;
+    width:700px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    font-weight:bold;
+    font-family:"Great Vibes";
+    font-size:20px;
+}
+
+.story-handler-container {
+    height:50px;
+    width:100px;
+    background-color:#99FFCC;
+    border:solid 2px;
+    border-color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+}
+
+#next-story {
+    position:relative;
+    left:48%;
+}
