@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("#loginForm").on("submit", function(e) {
+    $("#add-movies-form").on("submit", function(e) {
         e.preventDefault();
         $.ajax({
             url: $(this).attr("action"),
@@ -9,18 +9,17 @@ $(document).ready(function(){
             beforeSend: function() {
             },
             success: function(message) {
-            	if (message==="loginSuccessful"){
-            		window.location.href = "/";
+            	if (message==="addSuccessful"){
+            		window.location.href = "/movies";
             	}
             	else{
 	            	$('body').append("<div id='loginMessage'><p>"+message+"</p></div>")
-	            	$('.userInput').attr("value","");
             	}
             }
         });
     });
 
-    $("#newUserForm").on("submit", function(f) {
+    $(".vote-movie-form").on("submit", function(f) {
         f.preventDefault();
         $.ajax({
             url: $(this).attr("action"),
@@ -29,15 +28,32 @@ $(document).ready(function(){
             beforeSend: function() {
             },
             success: function(message) {
-            	if (message==="loginSuccessful"){
-            		window.location.href = "/";
+            	if (message==="voteSuccessful"){
+            		window.location.href = "/movies";
             	}
             	else{
 	            	$('body').append("<div id='loginMessage'><p>"+message+"</p></div>")
-	            	$('.userInput').attr("value","");
             	}
             }
         });
     });
 
+    $(".delete-movie-form").on("submit", function(g) {
+        g.preventDefault();
+        $.ajax({
+            url: $(this).attr("action"),
+            type: 'POST',
+            data: $(this).serialize(),
+            beforeSend: function() {
+            },
+            success: function(message) {
+            	if (message==="deleteSuccessful"){
+            		window.location.href = "/movies";
+            	}
+            	else{
+	            	$('body').append("<div id='loginMessage'><p>"+message+"</p></div>")
+            	}
+            }
+        });
+    });
 })

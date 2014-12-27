@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var photoAddUrlSchema = new Schema({
 	photoUrl: String
-})
+});
 var photoAddUrlModel = mongoose.model("photoUrl",photoAddUrlSchema);
 
 /* GET home page. */
@@ -32,16 +32,16 @@ router.post('/urlAdd',function(req,res){
 			if (error){
 				return handleError(error);
 			}
+			res.redirect('/photos');
 		});
 	}
-	res.redirect('/photos');
 })
 
 router.post('/deletePhoto',function(req,res){
 
 	photoAddUrlModel.findOneAndRemove({photoUrl:req.body.photoUrl},function(){
+		res.redirect('/photos');
 	});
-	res.redirect('/photos');
 })
 
 module.exports = router;

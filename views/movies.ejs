@@ -8,7 +8,8 @@
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src='./javascripts/script.js'></script>    
+    <script src='./javascripts/script.js'></script>
+    <script src="./javascripts/moviesScript.js"></script>    
 
 </head>
 <body>
@@ -53,14 +54,37 @@
     <p>Movies</p>
   </div>
 
-  <div class="movies-container">
-    <div class="movies-row">
-      <div class="movie-name">
-        <p>Interstellar</p>
+  <%for (var movieIndex=0;movieIndex<allMovies.length;movieIndex++){%>
+    <div class="movies-container">
+      <div class="movies-row">
+        <div class="movie-name">
+          <p><%=allMovies[movieIndex].title%></p>
+        </div>
+        <div class="movie-votes">
+          <p><%=allMovies[movieIndex].voters.length%></p>
+        </div>
+        <div class="vote-movie-container">
+          <form class="vote-movie-form" action="movies/voteMovie" method="post">
+            <input type="hidden" name="movieTitle" value="<%=allMovies[movieIndex].title%>">
+            <input class="mySubmit" type="submit" value="Vote">
+          </form>
+        </div>
+        <div class="delete-movie-container">
+          <form class="delete-movie-form" action="movies/deleteMovie" method="post">
+            <input type="hidden" name="movieTitle" value="<%=allMovies[movieIndex].title%>">
+            <input class="mySubmit" type="submit" value="Delete">
+          </form>
+        </div>
       </div>
-      
     </div>
+  <%}%>
+  
+  <div id="add-movies-container">
+    <form id="add-movies-form" action="movies/addMovie" method="post">
+      <input type="text" name="movieTitle">
+      <input class="mySubmit" type="submit" value="Add Movie">
+    </form>
   </div>
-    
+
 </body>
 </html>

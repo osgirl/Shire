@@ -72,9 +72,10 @@ router.post('/new_user',function(req,res,next){
 					if (error){
 						return handleError(error);
 					}
+					req.session.currentUser = req.body.user;
+					res.send("loginSuccessful");
 				})
-				req.session.currentUser = req.body.user;
-				res.send("loginSuccessful");
+
 			}
 		});
 	}

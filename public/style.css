@@ -347,3 +347,50 @@ photos */
     border:1px solid;
     border-color:white;
 }
+
+/*---------------------------------------------------------------------------------
+movies */
+
+.movies-container {
+    width:600px;
+    height:60px;
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    border:5px solid;
+    border-color:white;
+}
+
+.movies-row {
+    display:table-row;
+}
+
+.movie-name {
+    display:table-cell;
+    width:300px;
+}
+
+.movie-name > p {
+    margin-left:15px;
+}
+
+.vote-movie-container {
+    display:table-cell;
+    text-align:center;
+}
+
+.delete-movie-container {
+    display:table-cell;
+    text-align:center;
+}
+
+#add-movies-container {
+    width:150px;
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#add-movies-form {
+    width:100px;
+}
