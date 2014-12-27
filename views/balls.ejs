@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel='stylesheet' type="text/css" href='./style.css'/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+    <script src="./libs/jquery-ui.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./libs/d3.min.js"></script>
+    <script src='./javascripts/script.js'></script>    
+    <style type="text/css">
+      circle {
+        stroke: #000;
+        stroke-opacity: .5;
+      }
+      #body {
+        margin-left:auto;
+        margin-right:auto;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">SHIRE</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/history">HISTORY</a></li>
+            <li><a href="/people">HOBBITS</a></li>
+            <li><a href="/events">EVENTS</a></li>
+            <li class="dropdown" id="dropdownRAYRAY">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/photos">PHOTOS</a></li>
+                <li><a href="/movies">MOVIES</a></li>
+                <li><a href="/balls">BALLS</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">LOGIN</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  <div class="welcome">
+    <p>Do You Have The Balls?</p>
+  </div>
+    <div id="body">
+      <div id="footer">
+        <div class="hint"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+      var w = 1280,
+          h = 800;
+
+      var nodes = d3.range(200).map(function() { return {radius: Math.random() * 20 + 4}; }),
+          color = d3.scale.category10();
+
+      var force = d3.layout.force()
+          .gravity(0.05)
+          .charge(function(d, i) { return i ? 0 : -2000; })
+          .nodes(nodes)
+          .size([w, h]);
+
+      var root = nodes[0];
+      root.radius = 0;
+      root.fixed = true;
+
+      force.start();
+
+      var svg = d3.select("#body").append("svg:svg")
+          .attr("width", w)
+          .attr("height", h);
+
+      svg.selectAll("circle")
+          .data(nodes.slice(1))
+        .enter().append("svg:circle")
+          .attr("r", function(d) { return d.radius-2; })
+          .style("fill", function(d, i) { return color(i % 3); });
+
+      force.on("tick", function(e) {
+        var q = d3.geom.quadtree(nodes),
+            i = 0,
+            n = nodes.length;
+
+        while (++i < n) {
+          q.visit(collide(nodes[i]));
+        }
+
+        svg.selectAll("circle")
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+      });
+
+      svg.on("mousemove", function() {
+        var p1 = d3.mouse(this);
+        root.px = p1[0];
+        root.py = p1[1];
+        force.resume();
+      });
+
+      function collide(node) {
+        var r = node.radius + 16,
+            nx1 = node.x - r,
+            nx2 = node.x + r,
+            ny1 = node.y - r,
+            ny2 = node.y + r;
+        return function(quad, x1, y1, x2, y2) {
+          if (quad.point && (quad.point !== node)) {
+            var x = node.x - quad.point.x,
+                y = node.y - quad.point.y,
+                l = Math.sqrt(x * x + y * y),
+                r = node.radius + quad.point.radius;
+            if (l < r) {
+              l = (l - r) / l * .5;
+              node.x -= x *= l;
+              node.y -= y *= l;
+              quad.point.x += x;
+              quad.point.y += y;
+            }
+          }
+          return x1 > nx2
+              || x2 < nx1
+              || y1 > ny2
+              || y2 < ny1;
+        };
+      }
+
+    </script>
+</body>
+</html>

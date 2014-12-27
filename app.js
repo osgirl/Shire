@@ -21,6 +21,7 @@ var login = require('./routes/login');
 var events = require('./routes/events');
 var movies = require('./routes/movies');
 var photos = require('./routes/photos');
+var balls = require('./routes/balls');
 var users = require('./routes/users');
 
 var app = express();
@@ -46,6 +47,7 @@ app.use('/login',login);
 app.use('/events',events);
 app.use('/movies',movies);
 app.use('/photos',photos);
+app.use('/balls',balls);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
