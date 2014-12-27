@@ -8,7 +8,8 @@
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src='./javascripts/script.js'></script>    
+    <script src='./javascripts/script.js'></script>
+    <script src="./javascripts/peopleScript.js"></script>
 
 </head>
 <body>
@@ -63,30 +64,26 @@
       <th>Kerberos</th>
       <th id="bio">Bio</th>
     </tr>
-<!--
-    <tr>
-      <td><div><img class="peeps" src="./images/shire_people/raymond.jpg"></div></td>
-      <td>Raymond Wu</td>
-      <td>6-3</td>
-      <td>raywu22</td>
-      <td>Sexy Beast</td>
-      <td>i like sushi ._.</td>
-    </tr>
 
-    <tr>
-      <td><div><img class="peeps" src="./images/shire_people/sophie.jpg"></div></td>
-      <td>Keiko (Sophocles) Mori</td>
-      <td>Something</td>
-      <td>Something</td>
-      <td>Something</td>
-      <td>Something</td>
-    </tr>
--->  
     <% for (var name in shirePeople){ %>
       <tr>
         <td><div><img class="peeps" src="./images/shire_people/<%=name%>.jpg"></div></td>
         <% for (var category in shirePeople[name]) {%>
-        <td><%= shirePeople[name][category] %></td>
+        <td>
+          <%var message = shirePeople[name][category]%>
+          <%var r=0%>
+          <%var currentMessage=""%>
+          <%while (r<message.length){%>
+            <%if (message.charAt(r)!="|"){%>
+              <%currentMessage+=message.charAt(r)%>
+            <%}%>
+            <%if (message.charAt(r)=="|" || r==message.length-1){%>
+              <p><%=currentMessage%></p>
+              <%currentMessage=""%>
+            <%}%>
+            <%r++%>
+          <%}%>
+        </td>
         <% } %>
       </tr>
     <% } %>

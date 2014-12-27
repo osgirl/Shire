@@ -12,6 +12,15 @@ var moviesModel = mongoose.model("movies",moviesSchema);
 /* GET home page. */
 router.get('/', function(req, res) {
 	moviesModel.find(function(error,movies){
+		for (var i=1;i<movies.length;i++){
+			var x = movies[i];
+			var j=i;
+			while (j>0 && movies[j-1].voters.length<x.voters.length){
+				movies[j]=movies[j-1];
+				j=j-1;
+			}
+			movies[j]=x;
+		}
 		res.render('movies',{allMovies:movies});
 	});
 });
@@ -54,7 +63,7 @@ router.post("/voteMovie", function(req,res){
 				}
 			}
 			if (alreadyVoted){
-				res.send("You already Voted!");
+				res.send("You already voted for this!");
 			}
 			else {
 				movie.voters.push(req.session.currentUser);
