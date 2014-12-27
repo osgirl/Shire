@@ -68,7 +68,7 @@
       <div class="imageRow">
         <%for (var j=i*4;j<Math.min(i*4+4,allUrlPhotos.length);j++){%>
           <div class="imageBound" style="width:200px">
-            <form action="photos/deletePhoto" method="post">
+            <form class="delete-photo-form" action="photos/deletePhoto" method="post">
             <input type="hidden" name="photoUrl" value="<%=allUrlPhotos[j].photoUrl%>">
             <input class="smallSubmit" type="submit" value="X"/>
             <img class="photosPicSmall" src="<%=allUrlPhotos[j].photoUrl%>">

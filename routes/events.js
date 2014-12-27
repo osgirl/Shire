@@ -15,36 +15,40 @@ var eventsModel = mongoose.model("events",eventsSchema);
 
 router.get('/', function(req, res) {
 	eventsModel.find(function(err,allEvents){
-
 		res.render('events',{events:allEvents});
 	})
 });
 
 router.post('/add_event',function(req,res){
-	var newEvent = new eventsModel({
-		title: req.body.title,
-		description: req.body.description,
-		eventWhere: req.body.eventWhere,
-		eventWhen: req.body.eventWhen,
-		meetWhere: req.body.meetWhere,
-		meetWhen: req.body.meetWhen
-	});
-	newEvent.save(function(error){
-		if (error){
-			return handleError(error);
-		}
-		res.redirect('/events');
-	})
+	if (!req.session.currentUser){
+		res.send("Login to add");
+	}
+	else {
+		var newEvent = new eventsModel({
+			title: req.body.title,
+			description: req.body.description,
+			eventWhere: req.body.eventWhere,
+			eventWhen: req.body.eventWhen,
+			meetWhere: req.body.meetWhere,
+			meetWhen: req.body.meetWhen
+		});
+		newEvent.save(function(error){
+			if (error){
+				return handleError(error);
+			}
+			res.send("addSuccessful");
+		})
+	}
 	
 })
 
 router.post('/deleteEvent',function(req,res){
 	if (!req.session.currentUser){
-		res.send("please login");
+		res.send("Login to delete");
 	}
 	else {
 		eventsModel.findOneAndRemove({title:req.body.title},function(){
-			res.redirect('/events');
+			res.send("deleteSuccessful");
 		});
 	}
 

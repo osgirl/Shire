@@ -38,10 +38,15 @@ router.post('/urlAdd',function(req,res){
 })
 
 router.post('/deletePhoto',function(req,res){
+	if (req.session.currentUser!=="rayray"){
+		res.send("Sorry, you don't have permission to delete");
+	}
+	else {
+		photoAddUrlModel.findOneAndRemove({photoUrl:req.body.photoUrl},function(){
+			res.send("deleteSuccessful");
+		});
+	}
 
-	photoAddUrlModel.findOneAndRemove({photoUrl:req.body.photoUrl},function(){
-		res.redirect('/photos');
-	});
 })
 
 module.exports = router;
