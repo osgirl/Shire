@@ -234,13 +234,17 @@ login */
 events */
 
 .event-outer {
-    margin-top:5px;
     margin-left:30px;
     margin-right:20px;
     height:200px;
-    padding:10px;
+    padding-left:25px;
+    margin-top:-5px;
     border:5px solid;
     border-color: white;
+}
+
+.event-outer > h2{
+    font-weight:bold;
 }
 
 .event-info {
