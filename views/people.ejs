@@ -71,17 +71,22 @@
         <% for (var category in shirePeople[name]) {%>
         <td>
           <%var message = shirePeople[name][category]%>
-          <%var r=0%>
-          <%var currentMessage=""%>
-          <%while (r<message.length){%>
-            <%if (message.charAt(r)!="|"){%>
-              <%currentMessage+=message.charAt(r)%>
+          <%if (message.substring(0,4)==="http"){%>
+            <a href="<%=message%>"><%=message%></a>
+          <%}%>
+          <%if (message.substring(0,4)!=="http"){%>
+            <%var r=0%>
+            <%var currentMessage=""%>
+            <%while (r<message.length){%>
+              <%if (message.charAt(r)!="|"){%>
+                <%currentMessage+=message.charAt(r)%>
+              <%}%>
+              <%if (message.charAt(r)=="|" || r==message.length-1){%>
+                <p><%=currentMessage%></p>
+                <%currentMessage=""%>
+              <%}%>
+              <%r++%>
             <%}%>
-            <%if (message.charAt(r)=="|" || r==message.length-1){%>
-              <p><%=currentMessage%></p>
-              <%currentMessage=""%>
-            <%}%>
-            <%r++%>
           <%}%>
         </td>
         <% } %>
