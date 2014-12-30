@@ -24,7 +24,7 @@ $(document).ready(function(){
 	$(".backofnav").hide();
 	$(window).scroll(function(){
 		if ($(window).scrollTop()>120){
-			$(".backofnav").fadeIn();
+			$(".backofnav").fadeIn(300);
 		// 	$(".navbar").css({"box-shadow":"0px 0px 10px"});
 		// 	$(".navbar").css({"background-color":"rgb(152,230,172,1)"});
 		}
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		// 	$(".navbar").css({"background-color":"rgb(152,230,172,"+scrollDifference/50.0+")"});
 		// }
 		else {
-			$(".backofnav").fadeOut();
+			$(".backofnav").fadeOut(300);
 		// 	$(".navbar").css({"box-shadow":"0px 0px 0px"});
 		// 	$(".navbar").css({"background-color":"transparent"});
 		}
