@@ -4,10 +4,10 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res) {
   	if (!req.session.currentUser){
-		res.render('balls',{isLoggedIn:false});
+		res.render('history',{isLoggedIn:false});
 	}
 	else {
-		res.render('balls',{isLoggedIn:true});
+		res.render('history',{isLoggedIn:true});
 	}
 });
 
