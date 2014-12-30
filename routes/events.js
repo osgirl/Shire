@@ -15,8 +15,16 @@ var eventsModel = mongoose.model("events",eventsSchema);
 
 router.get('/', function(req, res) {
 	eventsModel.find(function(err,allEvents){
-		res.render('events',{events:allEvents});
-	})
+		if (!req.session.currentUser){
+			res.render('events',{isLoggedIn:false,
+									events:allEvents});		
+		}
+		else {
+			res.render('events',{isLoggedIn:true,
+									events:allEvents});		
+		}
+	});
+
 });
 
 router.post('/add_event',function(req,res){

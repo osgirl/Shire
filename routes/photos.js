@@ -17,7 +17,8 @@ router.get('/', function(req, res) {
 	}
 	else {
 		photoAddUrlModel.find(function(error,allPhotoUrls){
-			res.render('photos',{allUrlPhotos:allPhotoUrls});
+			res.render('photos',{allUrlPhotos:allPhotoUrls,
+								isLoggedIn:true});
 		});
 	}
 });

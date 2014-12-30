@@ -21,6 +21,7 @@ router.get('/', function(req, res) {
 	}
 	else {
 		res.render('people',{title:"people",
+            isLoggedIn:true,
 						shirePeople:shirePeopleRandomized});
 	}
 });

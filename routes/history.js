@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('history');
+  	if (!req.session.currentUser){
+		res.render('balls',{isLoggedIn:false});
+	}
+	else {
+		res.render('balls',{isLoggedIn:true});
+	}
 });
 
 module.exports = router;

@@ -44,7 +44,16 @@
         <form class="navbar-form navbar-left" role="search">
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/login"><button class="login-button">LOGIN</button></a></li>
+          <%if (!isLoggedIn){%>
+            <li><a href="/login"><button class="login-button">LOGIN</button></a></li>
+          <%}%>
+          <%if (isLoggedIn){%>
+            <li>
+              <form id="myForm" action="login/logout" method="post"> 
+                <button class="login-button" type="submit">Logout</button> 
+              </form>
+            </li>
+          <%}%>        
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

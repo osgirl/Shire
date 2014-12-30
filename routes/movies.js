@@ -21,7 +21,12 @@ router.get('/', function(req, res) {
 			}
 			movies[j]=x;
 		}
-		res.render('movies',{allMovies:movies});
+		if (!req.session.currentUser){
+			res.render('movies',{allMovies:movies,isLoggedIn:false});
+		}
+		else {
+			res.render('movies',{allMovies:movies,isLoggedIn:true});
+		}
 	});
 });
 
