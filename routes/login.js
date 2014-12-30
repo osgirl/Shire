@@ -86,6 +86,7 @@ router.post('/new_user',function(req,res,next){
 
 router.post('/logout',function(req,res,next){
 	req.session.currentUser = false;
+	res.render('index',{message:"Logged Out"});
 	res.redirect('/');
 })
 
