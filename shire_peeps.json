@@ -94,5 +94,17 @@
 		"Course Number":"2a concentrating in International Development",
 		"Kerberos": "lindseyw",
 		"Bio":"https://www.youtube.com/watch?v=B_T9dfpKXwY"
+	},
+	"david": {
+		"Name":"David Gaddy",
+		"Course Number":"6-3",
+		"Kerberos": "dgaddy",
+		"Bio":"I like to play piano, write code, and play spades."
+	},
+	"ChrisG": {
+		"Name":"Christopher Galea",
+		"Course Number":"16 & 8",
+		"Kerberos": "cgalea",
+		"Bio":"Untitled We Stand (where my Bio stands for now)"
 	}
 }

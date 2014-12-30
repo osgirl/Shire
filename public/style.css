@@ -316,12 +316,12 @@ photos */
     border:5px solid;
     border-color:white;
     background-color:black;
+    margin-left:-5px;
 }
 
 .photosPicSmall {
     width:200px;
     height:150px;
-    margin:0 auto;
 }
 
 .photosPicSmall:hover {
