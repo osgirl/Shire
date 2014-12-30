@@ -198,22 +198,84 @@ people */
 /*---------------------------------------------------------------------------------
 login */
 
+.loginPage {
+    background-color: #D7E0D6;
+}
+
+.loginHeader {
+    background: #98E6AC;
+    font-size: 2.5em;
+    width: 100%;
+    border-bottom: 4px solid #049F65;
+}
+
+.loginHeader a {
+    margin-left:20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color:#035F23;
+}
+
+.loginHeader a:hover {
+    color:#098202;
+}
+
+#loginForm .form-control:focus {
+    border-color: #67e98a;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
+}
+
+#newUserForm .form-control:focus {
+    border-color: #67e98a;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
+}
+
+.signIn{
+    position:relative;
+    margin-top: 30px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.signIn#Up {
+    margin-top: 15px;
+}
+
+.signIn > p{
+    position: relative;
+    font-family: "Great Vibes";
+    font-size: 5em;
+    font-weight: bold;
+    color:#035F23;
+}
+
+
+hr {
+    border-bottom: 4px solid #049F65;
+    width:55%;
+}
+
+
+
 .login_form {
-    height:60px;
-    width:150px;
-    margin-top: 10px;
-    margin-bottom: 150px;
+    /*height:60px;*/
+    width:30%;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 150px;*/
     margin-left: auto;
     margin-right: auto;
 }
 
 .login_form2 {
-    height:60px;
-    width:150px;
-    margin-top:10px;
+    /*height:60px;*/
+    width:30%;
+    /*margin-top:10px;*/
     margin-left:auto;
     margin-right:auto;
-    margin-bottom:200px;
+    /*margin-bottom:200px;*/
 }
 
 .logout {
@@ -243,6 +305,21 @@ login */
     z-index:1337;
 }
 
+label {
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit2 {
+    margin-bottom: 50px;
+}
 /*---------------------------------------------------------------------------------
 events */
 
@@ -483,4 +560,27 @@ history */
 #next-story {
     position:relative;
     left:46%;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  display: none;
+  /*min-width: 160px;*/
+  padding: 5px 0;
+  margin-left: -17px;
+  text-align: center;
+  list-style: none;
+  background-color: rgba(152, 230, 172, 0.8);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+  /*-webkit-background-clip: padding-box;
+          background-clip: padding-box;*/
+  border-bottom:1px solid #049F65;
+  /*border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);*/
 }

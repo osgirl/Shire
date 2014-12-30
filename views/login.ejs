@@ -1,99 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css">
     <link rel='stylesheet' type="text/css" href='./style.css'/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
-    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src='./javascripts/script.js'></script>  
+    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>  
     <script src="./javascripts/loginScript.js"></script>
+    <script src='./javascripts/script.js'></script>
 </head>
-<body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/home">SHIRE</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="/history">HISTORY</a></li>
-          <li><a href="/people">HOBBITS</a></li>
-          <li><a href="/events">EVENTS</a></li>
-          <li class="dropdown" id="dropdownRAYRAY">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">OTHER</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="/photos">PHOTOS</a></li>
-              <li><a href="/movies">MOVIES</a></li>
-              <li><a href="/balls">BALLS</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/login">LOGIN</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div class="backofnav"></div>
-
+<body class="loginPage">
+  <div class="loginHeader">
+    <a href="/home">SHIRE</a>
+  </div>
   <%if (message.length!=0){%>
   <div id="loginMessage">
     <p><%=message%></p>
   </div>
   <%}%>
 
+
 <%if (!isLoggedIn){%>
-  <div class="welcome">
-    <p>Login</p>
+  <div class="signIn">
+    <p>Sign In</p>
   </div>
-  <div class="login_form">
-    <form id="loginForm" action="login/login_user" method="post"> 
-      <label>User:</label> 
-      <input class="userInput" type="text" name="user" /> 
-      <label>Password:</label>
-      <input class="userInput" type="password" name="password"/> 
-      <input id="login_submit" class="mySubmit" type="submit" value="Submit" /> 
-    </form>
+  <form id="loginForm" action="login/login_user" method="post"> 
+    <div class="form-group">
+      <label for="uName1">Username</label> 
+      <input class="form-control login_form userInput" id="uName1" type="text" name="user" placeholder="Enter Username"/>
+    </div>
+    <div class="form-group"> 
+      <label for="pass1">Password</label>
+      <input class="form-control login_form userInput" id="pass1" type="password" name="password" placeholder="Password"/> 
+    </div>
+      <button class="btn btn-success" type="submit">Submit</button>  
+  </form>  
+
+  <hr>
+
+  <div class="signIn" id="Up">
+    <p>Sign Up</p>
   </div>
 
-  <div class="welcome">
-    <p>New User</p>
-  </div>
+  <form id="newUserForm" action="login/new_user" method="post">
+    <div class="form-group"> 
+      <label for="uName2">Username</label>
+      <input class="form-control login_form2 userInput" id="uName2" type="text" name="user" placeholder="Choose Username"/>
+    </div>
+    <div class="form-group"> 
+      <label for="pass2">Password</label>
+      <input class="form-control login_form2 userInput" id="pass2" type="password" name="password" placeholder="Choose Password"/>
+    </div>
+    <div class="form-group"> 
+      <label for"faveColor">What's Raymond's favorite color?</label>
+      <input class="form-control login_form2 userInput" id="faveColor" type="text" name="secret" /> 
+    </div>
+    <button class="btn btn-success" id="submit2" type="submit">Submit</button> 
+  </form>
 
-  <div class="login_form2">
-    <form id="newUserForm" action="login/new_user" method="post"> 
-      <label>User:</label>
-      <input class="userInput" type="text" name="user" /> 
-      <label>Password:</label>
-      <input class="userInput" type="password" name="password"/> 
-      <label>What's Raymond's favorite color?</label>
-      <input class="userInput" type="text" name="secret" /> 
-      <input class="mySubmit" type="submit" value="Submit" /> 
-    </form>
-  </div>
 <%}%>
 <%if (isLoggedIn){%>
-  <div class="welcome">
+  <div class="signIn">
     <p>Logout</p>
   </div>
 
   <div class="logout">
     <form id="myForm" action="login/logout" method="post"> 
-      <input class="mySubmit" type="submit" value="Logout" /> 
+      <button class="btn btn-success" id="submit2" type="submit">Logout</button> 
     </form>
   </div>
 <%}%>
