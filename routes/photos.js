@@ -57,7 +57,7 @@ router.post('/fileAdd', function(req, res) {
             fs.writeFile(new_path, data, function(err) {
                 fs.unlink(old_path, function(err) {
                     if (err) {
-                        res.send("unsuccessful");
+                        res.render("index",{message:"Upload Unsuccessful"});
                     } else {
                     	var newPhotoUrl = new photoAddUrlModel({
                     		photoUrl: "images/shire_photos/"+file_name
@@ -82,7 +82,19 @@ router.post('/deletePhoto',function(req,res){
 	}
 	else {
 		photoAddUrlModel.findOneAndRemove({photoUrl:req.body.photoUrl},function(){
-			res.send("deleteSuccessful");
+			if (req.body.photoUrl.substring(0,4)==="http"){
+				res.send("deleteSuccessful");
+			}
+			else {
+				var directoryName = __dirname.substring(0,__dirname.length-7);
+				var pathToDelete = path.join(directoryName,'public/',req.body.photoUrl);
+				fs.unlink(pathToDelete,function(err){
+					if (err){
+						console.log(err);
+					}
+					res.send("deleteSuccessful");
+				})
+			}
 		});
 	}
 })
