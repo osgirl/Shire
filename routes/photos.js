@@ -10,7 +10,7 @@ var photoAddUrlModel = mongoose.model("photoUrl",photoAddUrlSchema);
 
 /* GET home page. */
 router.get('/', function(req, res) {
-	req.session.currentUser=true;
+	//req.session.currentUser=true;
 	if (!req.session.currentUser){
 		res.render('login',{message:"please log in",
 							isLoggedIn:false});
