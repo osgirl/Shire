@@ -45,12 +45,12 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
           <%if (!isLoggedIn){%>
-            <li><a href="/login"><button class="login-button">LOGIN</button></a></li>
+            <li><a href="/login" id="loginLink"><button class="login-button btn btn-success">Sign In</button></a></li>
           <%}%>
           <%if (isLoggedIn){%>
-            <li>
+            <li class="loginSide">
               <form id="myForm" action="login/logout" method="post"> 
-                <button class="login-button" type="submit">Logout</button> 
+                <button class="login-button btn btn-success" type="submit">Sign Out</button> 
               </form>
             </li>
           <%}%>

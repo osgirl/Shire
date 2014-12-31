@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
@@ -13,7 +14,7 @@
     <script src='./javascripts/historyScript.js'></script>
 
 </head>
-<body>
+<body class="history">
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,12 +47,12 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
           <%if (!isLoggedIn){%>
-            <li><a href="/login"><button class="login-button">LOGIN</button></a></li>
+            <li><a href="/login" id="loginLink"><button class="login-button btn btn-success">Sign In</button></a></li>
           <%}%>
           <%if (isLoggedIn){%>
-            <li>
+            <li class="loginSide">
               <form id="myForm" action="login/logout" method="post"> 
-                <button class="login-button" type="submit">Logout</button> 
+                <button class="login-button btn btn-success" type="submit">Sign Out</button> 
               </form>
             </li>
           <%}%>
@@ -62,22 +63,28 @@
   <div class="backofnav"></div>
   
   <div class="welcome">
-    <p>Hi Story!</p>
+    <p>History</p>
   </div>
 
   <div class="history-pic-container">
-    <img class="history-pic" src="./images/shire_history/history1.jpg">
+    <div class="history-words-container"><p class="history-words">A long long time ago, I can still remember how that music used to make me smile. And I knew if I had my chance, I could make those people dance, and maybe they'd be happy, for a while...But February made me shiver, with every paper I'd deliver, bad news on the doorstep, I couldn't take one more step...I can't remember if I cried when I read about his widowed bride, but something touched me deep inside... The day the music died</p>
+    </div>
+    <div class="page-nav">
+      <a href="#" id="previous-story"><i class="fa fa-chevron-left"></i></a>
+      <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+      </ul>
+      <a href="#" id="next-story"><i class="fa fa-chevron-right"></i></a>
+    </div>
   </div>
-
-  <div class="history-words-container">
-    <p class="history-words">A long long time ago, I can still remember how that music used to make me smile. And I knew if I had my chance, I could make those people dance, and maybe they'd be happy, for a while...But February made me shiver, with every paper I'd deliver, bad news on the doorstep, I couldn't take one more step...I can't remember if I cried when I read about his widowed bride, but something touched me deep inside... The day the music died</p>
+  <div class="footnote">
+      <address>
+        Written by Raymond Wu, Christopher Womack, and Sophie Mori<br>
+        <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a> &bull; <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a> &bull; <a href="mailto:ksmori@mit.edu">ksmori@mit.edu</a>
+      </address>
   </div>
-
-  <!--should we make a cover page for the story-->
-  <!--should make the previous button not display when on the first story
-      should make the next button not display either when on the last story-->
-  <button class="mySubmit" id="previous-story" type="button">Previous</button>
-  <button class="mySubmit" id="next-story" type="button">Next</button>
-
 </body>
 </html>
