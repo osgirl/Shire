@@ -10,7 +10,7 @@ var photoAddUrlModel = mongoose.model("photoUrl",photoAddUrlSchema);
 
 /* GET home page. */
 router.get('/', function(req, res) {
-	//req.session.currentUser=true;
+	req.session.currentUser=true;
 	if (!req.session.currentUser){
 		res.render('login',{message:"please log in",
 							isLoggedIn:false});
@@ -24,7 +24,6 @@ router.get('/', function(req, res) {
 });
 
 router.post('/urlAdd',function(req,res){
-
 	if (req.body.toAddUrl.substring(0,4)==="http"){
 		var newPhotoUrl = new photoAddUrlModel({
 			photoUrl: req.body.toAddUrl.toString()
@@ -36,6 +35,13 @@ router.post('/urlAdd',function(req,res){
 			res.redirect('/photos');
 		});
 	}
+	else {
+		res.redirect('/photos');
+	}
+})
+
+router.post('/fileAdd',function(req,res){
+	console.log(req.body);
 })
 
 router.post('/deletePhoto',function(req,res){

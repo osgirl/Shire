@@ -69,7 +69,15 @@
     <form id="urlAdd" action="photos/urlAdd" method="post">
       <label>Add photo from public url</label>
       <input type="text" name="toAddUrl"/>
-      <input class="mySubmit" type="submit" value="submit"/>
+      <input class="mySubmit" type="submit" value="Submit"/>
+    </form>
+  </div>
+
+  <div id="fileAdd-container">
+    <form id="fileAdd" action="photos/fileAdd"  method="post">
+      <label>Add photo from file</label>
+      <input type="file" name="toAddFile" accept="image/*"/>
+      <input class="mySubmit" type="submit" value="Upload"/>
     </form>
   </div>
 

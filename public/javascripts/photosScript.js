@@ -27,3 +27,26 @@ $(document).ready(function(){
         });
     });
 })
+
+function loadImageFileAsURL()
+{
+    var filesSelected = document.getElementById("inputFileToLoad").files;
+    if (filesSelected.length > 0)
+    {
+        var fileToLoad = filesSelected[0];
+
+        var fileReader = new FileReader();
+
+        fileReader.onload = function(fileLoadedEvent) 
+        {
+            var textAreaFileContents = document.getElementById
+            (
+                "textAreaFileContents"
+            );
+    
+            textAreaFileContents.innerHTML = fileLoadedEvent.target.result;
+        };
+
+        fileReader.readAsDataURL(fileToLoad);
+    }
+}
