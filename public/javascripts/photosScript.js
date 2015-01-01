@@ -26,6 +26,42 @@ $(document).ready(function(){
             }
         });
     });
+    $("#urlAdd").on("submit", function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(this).attr("action"),
+            type: 'POST',
+            data: $(this).serialize(),
+            beforeSend: function() {
+            },
+            success: function(message) {
+                if (message==="addSuccessful"){
+                    window.location.href = "/photos";
+                }
+                else{
+                    $('body').append("<div id='loginMessage'><p>"+message+"</p></div>")
+                }
+            }
+        });
+    });
+    $("#fileAdd").on("submit", function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(this).attr("action"),
+            type: 'POST',
+            data: $(this).serialize(),
+            beforeSend: function() {
+            },
+            success: function(message) {
+                if (message==="addSuccessful"){
+                    window.location.href = "/photos";
+                }
+                else{
+                    $('body').append("<div id='loginMessage'><p>"+message+"</p></div>")
+                }
+            }
+        });
+    });
 })
 
 function loadImageFileAsURL()

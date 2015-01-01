@@ -3,108 +3,126 @@
 		"Name":"Raymond Wu",
 		"Course Number":"6-3",
 		"Kerberos":"raywu22",
-		"Bio":"One of the creators of the shire website, I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour)."
+		"Bio":"One of the creators of the shire website, I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour).",
+		"Year":"2"
 	},
 	"sophie": {
 		"Name":"Sophie Mori",
 		"Course Number":"6-3, 24",
 		"Kerberos":"ksmori",
-		"Bio":"This biography is not related to biology, nor is it biodegradable. Sorry."
+		"Bio":"This biography is not related to biology, nor is it biodegradable. Sorry.",
+		"Year":"1"
 	},
 	"chrisWomack": {
 		"Name":"Chris Womack",
 		"Course Number":"6-3, 15",
 		"Kerberos":"cwwomack",
-		"Bio":"I’m Shire Dad, resident style guru and co-creator of this website. I’d say I’m pretty cool, and chances are you are too. Let’s be friends."
+		"Bio":"I’m Shire Dad, resident style guru and co-creator of this website. I’d say I’m pretty cool, and chances are you are too. Let’s be friends.",
+		"Year":"2"
 	},
 	"travis": {
 		"Name":"Travis Libsack",
 		"Course Number":"Course 2",
 		"Kerberos": "libsackt",
-		"Bio":"bio"
+		"Bio":"bio",
+		"Year":"1"
 	},
 	"Josh": {
 		"Name":"Joshua Millings",
 		"Course Number":"8",
 		"Kerberos": "millings",
-		"Bio":"Hi, I'm Josh, Welcome to my bio!"
+		"Bio":"Hi, I'm Josh, Welcome to my bio!",
+		"Year":"3"
 	},
 	"EricF": {
 		"Name":"Eric Fegan",
 		"Course Number":"18C",
 		"Kerberos": "ejfegan",
-		"Bio":"Well, you found me. Congratulations. But was it worth it?"
+		"Bio":"Well, you found me. Congratulations. But was it worth it?",
+		"Year":"2"
 	},
 	"Caralyn": {
 		"Name":"Caralyn Cutlip",
 		"Course Number":"???",
 		"Kerberos": "caralyn",
-		"Bio":"Born a poor street urchin, I quickly learned that, while most believe in ‘only the strong survive,’ a more accurate idiom is ‘only the really really ridiculously good looking survive.’ This mantra has carried me through my life, from the pits of Moria, to the heights of the Misty Mountains. But most importantly, after years of clawing my way up the ladders of success and procrastination, it’s led me here, to the Shire, to my new home."
+		"Bio":"Born a poor street urchin, I quickly learned that, while most believe in ‘only the strong survive,’ a more accurate idiom is ‘only the really really ridiculously good looking survive.’ This mantra has carried me through my life, from the pits of Moria, to the heights of the Misty Mountains. But most importantly, after years of clawing my way up the ladders of success and procrastination, it’s led me here, to the Shire, to my new home.",
+		"Year":"1"
 	},
 	"Ale": { 
 		"Name":"Alejandro Krauskopf",
 		"Course Number":"10B",
 		"Kerberos": "alekraus",
-		"Bio":"I’ll think of something soon"
+		"Bio":"I’ll think of something soon",
+		"Year":"3"
 	},
 	"Jacky": {
 		"Name":"Jacqueline  Nava",
 		"Course Number":"16",
 		"Kerberos": "jnava111",
-		"Bio":"I like planes and boba."
+		"Bio":"I like planes and boba.",
+		"Year":"3"
 	},
 	"EricB": {
 		"Name":"Eric Bartell",
 		"Course Number":"6-7", 
 		"Kerberos": "ebartell", 
-		"Bio":"Bio(logy). I also enjoy Comp Sci, Lacrosse, and hanging with the halflings of this here shire."
+		"Bio":"Bio(logy). I also enjoy Comp Sci, Lacrosse, and hanging with the halflings of this here shire.",
+		"Year":"3"
 	},
 	"MatthewW": {
 		"Name":"Matthew White",
 		"Course Number":"2A-?",
 		"Kerberos": "mtwrules",
-		"Bio":"Currently on adventure, and as such the Shire had to let him go on temporary leave.  Will be back with more board games to appease them.  Don’t mind company, so if you happen to find me, say hi!"
+		"Bio":"Currently on adventure, and as such the Shire had to let him go on temporary leave.  Will be back with more board games to appease them.  Don’t mind company, so if you happen to find me, say hi!",
+		"Year":"3"
 	},
 	"Jenny": {
 		"Name":"Jenny Halford",
 		"Course Number":"7",
 		"Kerberos": "jenny22",
-		"Bio":"Resident premed|Loves travel, cooking, art, and|of course, the Shire :)"
+		"Bio":"Resident premed|Loves travel, cooking, art, and|of course, the Shire :)",
+		"Year":"3"
 	},
 	"KathrynBrink": {
 		"Name":"Kathryn Brink",
 		"Course Number":"20",
 		"Kerberos": "krbrink",
-		"Bio":"Kathryn once lived on a farm|She never did anyone harm|She was super smart|And so good at art|And won everyone over with charm "
+		"Bio":"Kathryn once lived on a farm|She never did anyone harm|She was super smart|And so good at art|And won everyone over with charm ",
+		"Year":"3"
 	},
 	"ErinIbarra": {
 		"Name":"Erin Ibarra",
 		"Course Number":"6-1",
 		"Kerberos": "eeibarra",
-		"Bio":" There once was a woman named Erin|Who was always super carin'|She watched the Shire boys|And put up with their toys|Even when vuvuzelas were blarin'"
+		"Bio":" There once was a woman named Erin|Who was always super carin'|She watched the Shire boys|And put up with their toys|Even when vuvuzelas were blarin'",
+		"Year":"3"
 	},
 	"NoelEsparza": {
 		"Name":"Noel Esparza",
 		"Course Number":"16?",
 		"Kerberos": "nesparza",
-		"Bio":"I suck at bios, ummm help?|Roses are red|Violets are blue|Sloths are awesome|Potato…|Awesomeness too high control"
+		"Bio":"I suck at bios, ummm help?|Roses are red|Violets are blue|Sloths are awesome|Potato…|Awesomeness too high control",
+		"Year":"1"
 	},
 	"Lindsey": {
 		"Name":"Lindsey Wang",
 		"Course Number":"2a concentrating in International Development",
 		"Kerberos": "lindseyw",
-		"Bio":"https://www.youtube.com/watch?v=B_T9dfpKXwY"
+		"Bio":"https://www.youtube.com/watch?v=B_T9dfpKXwY",
+		"Year":"3"
 	},
 	"david": {
 		"Name":"David Gaddy",
 		"Course Number":"6-3",
 		"Kerberos": "dgaddy",
-		"Bio":"I like to play piano, write code, and play spades."
+		"Bio":"I like to play piano, write code, and play spades.",
+		"Year":"3"
 	},
 	"ChrisG": {
 		"Name":"Christopher Galea",
 		"Course Number":"16 & 8",
 		"Kerberos": "cgalea",
-		"Bio":"Untitled We Stand (where my Bio stands for now)"
+		"Bio":"Untitled We Stand (where my Bio stands for now)",
+		"Year":"3"
 	}
 }

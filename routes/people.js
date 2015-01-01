@@ -16,13 +16,12 @@ router.get('/', function(req, res) {
 	}
 	//req.session.currentUser = true;
 	if (!req.session.currentUser){
-		res.render('login',{message:"please log in",
-							isLoggedIn:false});
+		res.render('people',{isLoggedIn:false,
+                          shirePeople:shirePeopleRandomized});
 	}
 	else {
-		res.render('people',{title:"people",
-            isLoggedIn:true,
-						shirePeople:shirePeopleRandomized});
+		res.render('people',{isLoggedIn:true,
+						              shirePeople:shirePeopleRandomized});
 	}
 });
 
