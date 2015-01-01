@@ -4,24 +4,48 @@ var shirePeople = require('../shire_peeps.json');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-	var randomNumbers = shuffle(shirePeople);
-	var shireArray=[];
-	var shirePeopleRandomized = {}
-	for (i in shirePeople){
-		shireArray.push(i);
-	}
-	for (var j=0;j<randomNumbers.length;j++){
-		//console.log(shireArray[randomNumbers[j]]);
-		shirePeopleRandomized[shireArray[randomNumbers[j]]]=shirePeople[shireArray[randomNumbers[j]]];
-	}
+	var shirePeopleAlphabetized = Object.keys(shirePeople).sort();
+  var newShirePeople = {
+    "Freshman":{},
+    "Sophomore":{},
+    "Junior":{},
+    "Senior":{}
+  }
+  for (var i=0;i<shirePeopleAlphabetized.length;i++){
+    var shirePerson = shirePeople[shirePeopleAlphabetized[i]];
+    var shireYear = shirePerson["Year"];
+    var newPerson = {};
+    newPerson["Name"]=shirePerson["Name"];
+    newPerson["Course Number"]=shirePerson["Course Number"];
+    if (!req.session.currentUser){
+      newPerson["Kerberos"]="Login to view"
+    }
+    else {
+      newPerson["Kerberos"]=shirePerson["Kerberos"];      
+    }
+    newPerson["Kerberos"]=shirePerson["Kerberos"];
+    newPerson["Bio"]=shirePerson["Bio"];
+    if (shireYear==="1"){
+      newShirePeople["Freshman"][shirePeopleAlphabetized[i]]=newPerson;
+    }
+    else if (shireYear==="2"){
+      newShirePeople["Sophomore"][shirePeopleAlphabetized[i]]=newPerson;
+    }
+    else if (shireYear==="3"){
+      newShirePeople["Junior"][shirePeopleAlphabetized[i]]=newPerson;
+    }
+    else {
+      newShirePeople["Senior"][shirePeopleAlphabetized[i]]=newPerson;
+    }
+  }
 	//req.session.currentUser = true;
 	if (!req.session.currentUser){
 		res.render('people',{isLoggedIn:false,
-                          shirePeople:shirePeopleRandomized});
+                          shirePeople:newShirePeople});
 	}
 	else {
 		res.render('people',{isLoggedIn:true,
-						              shirePeople:shirePeopleRandomized});
+						              shirePeople:newShirePeople});
 	}
 });
 

@@ -53,12 +53,11 @@ router.post('/urlAdd',function(req,res){
 
 router.post('/fileAdd', function(req, res) {
 	if (!req.session.currentUser){
-		res.send('Login To Add');
+		res.redirect("/login");
 	}
 	else {
 	    var form = new formidable.IncomingForm();
 	    form.parse(req, function(err, fields, files) {
-	        // `file` is the name of the <input> field of type `file`
 	        var old_path = files.toAddFile.path;
 	        var file_size = files.toAddFile.size;
 	        var file_name = files.toAddFile.name.split('/').pop();
@@ -77,7 +76,7 @@ router.post('/fileAdd', function(req, res) {
 	                    		if (error){
 	                    			return handleError(error)
 	                    		}
-	                    		res.send("addSuccessful");
+	                    		res.redirect("/");
 	                    	})
 	                    }
 	                });

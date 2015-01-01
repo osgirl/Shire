@@ -64,48 +64,52 @@
   <p>Hobbits</p>
 </div>
 
-<div class="people">
-  <table class="people_table">
+<% for (var year in shirePeople){ %>
+  <h1><%=year%></h1>
+  <div class="people">
+    <table class="people_table">
 
-    <tr class="first_row">
-      <th>Potrait</th>
-      <th>Name</th>
-      <th>Course</th>
-      <th>Kerberos</th>
-      <th id="bio">Bio</th>
-    </tr>
-
-    <% for (var name in shirePeople){ %>
-      <tr>
-        <td><div><img class="peeps" src="./images/shire_people/<%=name%>.jpg"></div></td>
-        <% for (var category in shirePeople[name]) {%>
-        <td>
-          <%var message = shirePeople[name][category]%>
-          <%if (message.substring(0,4)==="http"){%>
-            <a href="<%=message%>"><%=message%></a>
-          <%}%>
-          <%if (message.substring(0,4)!=="http"){%>
-            <%var r=0%>
-            <%var currentMessage=""%>
-            <%while (r<message.length){%>
-              <%if (message.charAt(r)!="|"){%>
-                <%currentMessage+=message.charAt(r)%>
-              <%}%>
-              <%if (message.charAt(r)=="|" || r==message.length-1){%>
-                <p><%=currentMessage%></p>
-                <%currentMessage=""%>
-              <%}%>
-              <%r++%>
-            <%}%>
-          <%}%>
-        </td>
-        <% } %>
+      <tr class="first_row">
+        <th>Potrait</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Kerberos</th>
+        <th id="bio">Bio</th>
       </tr>
-    <% } %>
 
-  </table>
-</div>
+      <%for (var name in shirePeople[year]){%>
+        <tr>
+          <td><div><img class="peeps" src="./images/shire_people/<%=name%>.jpg"></div></td>
+          <% for (var category in shirePeople[year][name]) {%>
+          <td>
+            <%var message = shirePeople[year][name][category]%>
+            <%if (message.substring(0,4)==="http"){%>
+              <a href="<%=message%>"><%=message%></a>
+            <%}%>
+            <%if (message.substring(0,4)!=="http"){%>
+              <%var r=0%>
+              <%var currentMessage=""%>
+              <%while (r<message.length){%>
+                <%if (message.charAt(r)!="|"){%>
+                  <%currentMessage+=message.charAt(r)%>
+                <%}%>
+                <%if (message.charAt(r)=="|" || r==message.length-1){%>
+                  <p><%=currentMessage%></p>
+                  <%currentMessage=""%>
+                <%}%>
+                <%r++%>
+              <%}%>
+            <%}%>
+          </td>
+          <% } %>
+        </tr>
+      <%}%>
+      
 
+    </table>
+  </div>
+
+<%}%>
     
 </body>
 </html>

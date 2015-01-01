@@ -1,26 +1,26 @@
 {
-	"raymond": {
+	"Raymond": {
 		"Name":"Raymond Wu",
 		"Course Number":"6-3",
 		"Kerberos":"raywu22",
 		"Bio":"One of the creators of the shire website, I enjoy playing spades, league, volleyball, and frisbee in my free time. I hate waking up early (or even at a reasonable hour).",
 		"Year":"2"
 	},
-	"sophie": {
+	"Sophie": {
 		"Name":"Sophie Mori",
 		"Course Number":"6-3, 24",
 		"Kerberos":"ksmori",
 		"Bio":"This biography is not related to biology, nor is it biodegradable. Sorry.",
 		"Year":"1"
 	},
-	"chrisWomack": {
+	"ChrisWomack": {
 		"Name":"Chris Womack",
 		"Course Number":"6-3, 15",
 		"Kerberos":"cwwomack",
 		"Bio":"I’m Shire Dad, resident style guru and co-creator of this website. I’d say I’m pretty cool, and chances are you are too. Let’s be friends.",
 		"Year":"2"
 	},
-	"travis": {
+	"Travis": {
 		"Name":"Travis Libsack",
 		"Course Number":"Course 2",
 		"Kerberos": "libsackt",
@@ -111,7 +111,7 @@
 		"Bio":"https://www.youtube.com/watch?v=B_T9dfpKXwY",
 		"Year":"3"
 	},
-	"david": {
+	"David": {
 		"Name":"David Gaddy",
 		"Course Number":"6-3",
 		"Kerberos": "dgaddy",
