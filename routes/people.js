@@ -23,14 +23,13 @@ router.get('/', function(req, res) {
     else {
       newPerson["Kerberos"]=shirePerson["Kerberos"];      
     }
-    newPerson["Kerberos"]=shirePerson["Kerberos"];
     newPerson["Bio"]=shirePerson["Bio"];
     if (shireYear==="1"){
       newShirePeople["Freshman"][shirePeopleAlphabetized[i]]=newPerson;
     }
     else if (shireYear==="2"){
       newShirePeople["Sophomore"][shirePeopleAlphabetized[i]]=newPerson;
-    }
+    
     else if (shireYear==="3"){
       newShirePeople["Junior"][shirePeopleAlphabetized[i]]=newPerson;
     }
