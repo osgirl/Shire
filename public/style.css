@@ -305,7 +305,13 @@ hr {
     z-index:1337;
 }
 
-label {
+#loginForm label {
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newUserForm label {
     width:30%;
     margin-left: auto;
     margin-right: auto;
@@ -409,10 +415,8 @@ photos */
 
 .imageRow {
     display:table-row;
-    width:800px;
+    width:100%;
     height:150px;
-    border:5px solid;
-    border-color:white;
     padding:5px;
 }
 
@@ -420,9 +424,6 @@ photos */
     display:table-cell;
     height:150px;
     width:200px;
-    border:5px solid;
-    border-color:white;
-    background-color:black;
     margin-left:-5px;
 }
 
@@ -437,10 +438,9 @@ photos */
 
 .photosPicBig {
     position:fixed;
-    left:5%;
-    right:5%;
+    left:auto;
+    right:auto;
     top:5%;
-    width:90%;
     z-index:22;
 }
 
@@ -460,22 +460,47 @@ photos */
 }
 
 #urlAdd-container {
-    width:165px;
+    display: inline-block;    
     margin-left:auto;
     margin-right:auto;
+    margin-top: 40px;
+    width:165px;
     margin-bottom:50px;
 }
 
 #urlAdd {
     width:165px;
+    margin-right:15px;
+    display: inline-block;
 }
 
 #fileAdd-container {
+    display: inline-block;
     height:150px;
     width:150px;
     margin-left:auto;
     margin-right:auto;
+    margin-top: 40px;
     margin-bottom:20px;
+}
+
+#fileAdd {
+    display: inline-block;
+    width:165px;
+    margin-left:15px;
+}
+
+.container-container {
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-container .btn {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
 }
 
 .smallSubmit {
