@@ -76,7 +76,7 @@ router.post('/fileAdd', function(req, res) {
 	                    		if (error){
 	                    			return handleError(error)
 	                    		}
-	                    		res.redirect("/");
+	                    		res.redirect("/photos");
 	                    	})
 	                    }
 	                });
