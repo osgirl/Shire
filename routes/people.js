@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
     newPerson["Name"]=shirePerson["Name"];
     newPerson["Course Number"]=shirePerson["Course Number"];
     if (!req.session.currentUser){
-      newPerson["Kerberos"]="Login to view"
+      newPerson["Kerberos"]="Login to view";
     }
     else {
       newPerson["Kerberos"]=shirePerson["Kerberos"];      
@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
     }
     else if (shireYear==="2"){
       newShirePeople["Sophomore"][shirePeopleAlphabetized[i]]=newPerson;
-    
+    }    
     else if (shireYear==="3"){
       newShirePeople["Junior"][shirePeopleAlphabetized[i]]=newPerson;
     }
