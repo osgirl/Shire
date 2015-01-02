@@ -220,13 +220,7 @@ login */
     color:#098202;
 }
 
-#loginForm .form-control:focus {
-    border-color: #67e98a;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
-}
-
-#newUserForm .form-control:focus {
+.form-control:focus {
     border-color: #67e98a;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(103, 233, 162, 0.6);
@@ -366,10 +360,6 @@ events */
     height:200px;
     padding-left:25px;
     margin-top:-5px;
-    border:5px solid;
-    border-color: black;
-    border-radius:5px;
-    box-shadow:0px 0px 10px black;
     background-color:#66CC99;
 
 }
@@ -390,6 +380,16 @@ events */
 #event-delete {
     margin-right:30px;
     float:right;
+    border:none;
+    background-color: rgba(255,255,255,0);
+}
+
+#event-delete img {
+    border:none;
+    margin:0px;
+    padding:0px;
+    height:30px;
+    width:30px;
 }
 
 .add-event {
@@ -405,10 +405,10 @@ events */
 /*---------------------------------------------------------------------------------
 photos */
 
-.photosContainer {
+/*.photosContainer {
     display:table;
-/*    border:5px solid;
-    border-color:black;*/
+    border:5px solid;
+    border-color:black;
     margin-right:auto;
     margin-left:auto;
 }
@@ -459,7 +459,7 @@ photos */
     top:0px;
     left:0px;
     z-index:13;
-}
+}*/
 
 #urlAdd-container {
     display: inline-block;    
@@ -470,6 +470,15 @@ photos */
     margin-bottom:50px;
 }
 
+#urlAdd-container .btn {
+    display:block;
+}
+
+#urlAdd-container .form-control {
+    height:25px;
+    display:inline-block;
+}
+
 #urlAdd {
     width:165px;
     margin-right:15px;
@@ -478,22 +487,27 @@ photos */
 
 #fileAdd-container {
     display: inline-block;
-    height:150px;
-    width:150px;
+    height:165px;
+    padding:0px;
+    width:165px;
     margin-left:auto;
     margin-right:auto;
     margin-top: 40px;
     margin-bottom:20px;
+    vertical-align: top;
 }
 
 #fileAdd {
     display: inline-block;
     width:165px;
     margin-left:15px;
+    vertical-align: top;
 }
 
 .container-container {
     width: 370px;
+    height:165px;
+    padding:0px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -502,7 +516,11 @@ photos */
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    display: inline-block;
+}
+
+#mygallery {
+    border-top: 4px solid #049F65;
+    border-bottom: 4px solid #049F65;
 }
 
 .smallSubmit {

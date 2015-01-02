@@ -65,7 +65,7 @@
   <h4 class="event-description"><%=events[i].description%></h4>
   <form class="delete-event-form" action="events/deleteEvent" method="post">
   <input type="hidden" name="title" value="<%=events[i].title%>">
-  <input class="mySubmit" id="event-delete" type="submit" value="Delete" /> 
+  <button id="event-delete" type="submit"><img src="./images/close.png" /></button> 
   </form>
   <div class="event-table-outer">
     <div class="event-info">
@@ -98,7 +98,7 @@
     <input class="userInput" type="text" name="meetWhere"/> 
     <label>Meeting When</label>
     <input class="userInput" type="text" name="meetWhen"/> 
-    <input class="mySubmit" type="submit" value="Add Event" /> 
+    <button class="btn btn-success" type="submit">Add Event</button>
   </form>
 </div>
     

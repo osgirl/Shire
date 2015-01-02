@@ -1,13 +1,18 @@
 $(document).ready(function(){
-	$(".photosPicSmall").click(function(){
-		$("#overlay").addClass("photosCoverVisible");
-		$(this).removeClass("photosPicSmall").addClass("photosPicBig")
-	})
-	$("#overlay").on("click",function(){
-		$(this).removeClass("photosCoverVisible");
-		$(".photosPicBig").removeClass("photosPicBig").addClass("photosPicSmall");
-	})
-
+    $('#mygallery').justifiedGallery({
+        lastRow : 'nojustify', 
+        rowHeight : 150, 
+        rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+        margins : 1
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth : '80%',
+            maxHeight : '80%',
+            opacity : 0.8,
+            transition : 'elastic',
+            current : ''
+        });
+    });
 	$(".delete-photo-form").on("submit", function(e) {
         e.preventDefault();
         $.ajax({

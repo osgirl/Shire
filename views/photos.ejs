@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.css"/>
     <link rel='stylesheet' type="text/css" href='./style.css'/>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato: 300"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes"/>
+    <link rel="stylesheet" type="text/css" href="./libs/justifiedGallery.min.css"/>
+    <link rel="stylesheet" href="./libs/colorbox.css"/>
     <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
     <script src="./libs/jquery-ui.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <script src='./javascripts/script.js'></script>
-    <script src='./javascripts/photosScript.js'></script>    
+    <script src='./javascripts/photosScript.js'></script>   
+    <script src='./libs/jquery.justifiedGallery.min.js'></script> 
+    <script src="./libs/jquery.colorbox-min.js"></script>
 </head>
 
 <body>
@@ -58,19 +62,15 @@
     <p>Photos</p>
   </div>
 
-  <div class="photosContainer">
-    <%for (var i=0;i<Math.floor(allUrlPhotos.length/4)+1;i++){%>
-      <div class="imageRow">
-        <%for (var j=i*4;j<Math.min(i*4+4,allUrlPhotos.length);j++){%>
-          <div class="imageBound" style="width:200px">
-            <form class="delete-photo-form" action="photos/deletePhoto" method="post">
-            <input type="hidden" name="photoUrl" value="<%=allUrlPhotos[j].photoUrl%>">
-            <button class="smallSubmit" type="submit"><img src="./images/close.png" /></button>
-            <img class="photosPicSmall" src="<%=allUrlPhotos[j].photoUrl%>">
-            </form>
-          </div>
-        <%}%>
-      </div>
+  <div class="photosContainer" id="mygallery">
+    <%for (var i=0;i<allUrlPhotos.length;i++){%>      
+      <a class="gallery" href="<%=allUrlPhotos[i].photoUrl%>">
+        <!--<form class="delete-photo-form" action="photos/deletePhoto" method="post">
+        <input type="hidden" name="photoUrl" value="<%=allUrlPhotos[i].photoUrl%>">
+        <button class="smallSubmit" type="submit"><img src="./images/close.png" /></button>-->
+        <img src="<%=allUrlPhotos[i].photoUrl%>">
+        <!--</form>-->
+      </a>
     <%}%>
   </div>
 
@@ -78,7 +78,7 @@
   <form id="urlAdd" action="photos/urlAdd" method="post">
     <div class="form-group" id="urlAdd-container">
       <label>Add photo from public url</label>
-      <input type="text" name="toAddUrl"/>
+      <input type="text" class="form-control" name="toAddUrl"/>
       <button class="btn btn-success" type="submit">Submit</button>
     </div>
   </form>
@@ -91,7 +91,6 @@
     </div>
   </form>
   </div>
-
 
 <!--   <div class="photosContainer">
     <div class="imageRow">

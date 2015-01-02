@@ -23,7 +23,7 @@ $(document).ready(function(){
 	//$('#dropdownRAYRAY').hover()
 	$(".backofnav").hide();
 	$(window).scroll(function(){
-		if ($(window).scrollTop()>120){
+		if ($(window).scrollTop()>15){
 			$(".backofnav").fadeIn(300);
 		// 	$(".navbar").css({"box-shadow":"0px 0px 10px"});
 		// 	$(".navbar").css({"background-color":"rgb(152,230,172,1)"});
