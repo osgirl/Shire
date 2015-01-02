@@ -437,12 +437,14 @@ photos */
 }
 
 .photosPicBig {
-    position:fixed;
-    left:auto;
-    right:auto;
+    position: fixed;
+    width:70%;
+    left:15%;
+    right:15%;
     top:5%;
     z-index:22;
 }
+
 
 .photosCoverHide {
     opacity:0;
@@ -504,15 +506,22 @@ photos */
 }
 
 .smallSubmit {
-    font-size:10px;
-    text-align:center;
     height:20px;
     width:20px;
     position:absolute;
     z-index:2;
-    background-color:#C00000;
-    border:1px solid;
-    border-color:white;
+    background-color: rgba(255,255,255,0);
+    border:none;
+    padding: 0px;
+}
+
+.smallSubmit img {]]
+    vertical-align: top;
+    border:none;
+    margin:0px;
+    padding:0px;
+    height:15px;
+    width:15px;
 }
 
 
@@ -529,7 +538,6 @@ movies */
     border:5px solid;
     border-color:white;
     margin-top:-5px;
-    box-shadow:0px 0px 5px white;
     font-weight:bold;
 }
 
@@ -548,13 +556,36 @@ movies */
 }
 
 .vote-movie-container {
+    width:40px;
+    padding-right: 0px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    display:table-cell;
+    text-align:center;
+    border:none;
+}
+
+.delete-movie-container {
+    width:40px;
+    padding-top:13px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 17px;
     display:table-cell;
     text-align:center;
 }
 
-.delete-movie-container {
-    display:table-cell;
-    text-align:center;
+#add-movies-container button {
+    margin-top: 10px;
+}
+
+#add-movies-container .form-control {
+    width:150px;
+    height:25px;
+}
+
+#add-movies-container label {
+    width:150px;
 }
 
 #add-movies-container {
