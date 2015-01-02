@@ -65,7 +65,7 @@
           <div class="imageBound" style="width:200px">
             <form class="delete-photo-form" action="photos/deletePhoto" method="post">
             <input type="hidden" name="photoUrl" value="<%=allUrlPhotos[j].photoUrl%>">
-            <input class="smallSubmit" type="submit" value="X"/>
+            <button class="smallSubmit" type="submit"><img src="./images/close.png" /></button>
             <img class="photosPicSmall" src="<%=allUrlPhotos[j].photoUrl%>">
             </form>
           </div>

@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="movies">
 
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
@@ -72,13 +72,13 @@
         <div class="vote-movie-container">
           <form class="vote-movie-form" action="movies/voteMovie" method="post">
             <input type="hidden" name="movieTitle" value="<%=allMovies[movieIndex].title%>">
-            <input class="mySubmit" type="submit" value="Vote">
+            <button type="submit" class="btn btn-success">Vote</button>
           </form>
         </div>
         <div class="delete-movie-container">
           <form class="delete-movie-form" action="movies/deleteMovie" method="post">
             <input type="hidden" name="movieTitle" value="<%=allMovies[movieIndex].title%>">
-            <input class="mySubmit" type="submit" value="Delete">
+            <button class="smallSubmit" type="submit"><img src="./images/close.png" /></button>
           </form>
         </div>
       </div>
@@ -86,9 +86,10 @@
   <%}%>
   
   <div id="add-movies-container">
-    <form id="add-movies-form" action="movies/addMovie" method="post">
-      <input type="text" name="movieTitle">
-      <input class="mySubmit" type="submit" value="Add Movie">
+    <form class="form-group" id="add-movies-form" action="movies/addMovie" method="post">
+      <label>Have a suggestion?</label>
+      <input class="form-control" type="text" name="movieTitle">
+      <button type="submit" class="btn btn-success">Add</button>
     </form>
   </div>
 
