@@ -539,6 +539,7 @@ movies */
     border-color:white;
     margin-top:-5px;
     font-weight:bold;
+    border-radius: 10px;
 }
 
 .movies-row {
@@ -577,6 +578,9 @@ movies */
 
 #add-movies-container button {
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #add-movies-container .form-control {
@@ -585,6 +589,7 @@ movies */
 }
 
 #add-movies-container label {
+    text-align: center;
     width:150px;
 }
 
@@ -596,7 +601,7 @@ movies */
 }
 
 #add-movies-form {
-    width:100px;
+    width:150px;
 }
 
 .movie-title {
