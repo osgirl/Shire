@@ -130,11 +130,11 @@ address a:hover{
 /*---------------------------------------------------------------------------------
 people */
 
-.people {
+.peoplebody {
     background-color: #D7E0D6;
 }
 
-.people .welcome {
+.peoplebody .welcome {
     margin-top: 0px;
     height:155px;
     padding-top:50px;
@@ -156,6 +156,7 @@ people */
 }
 
 .people_table{
+  width: 80%;
   margin: auto;
   text-align: center;
   margin-bottom:20px;
