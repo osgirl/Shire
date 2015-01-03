@@ -6,10 +6,10 @@ var shirePeople = require('../shire_peeps.json');
 router.get('/', function(req, res) {
 	var shirePeopleAlphabetized = Object.keys(shirePeople).sort();
   var newShirePeople = {
-    "Freshman":{},
-    "Sophomore":{},
-    "Junior":{},
-    "Senior":{}
+    "2018s":{},
+    "2017s":{},
+    "2016s":{},
+    "2015s":{}
   }
   for (var i=0;i<shirePeopleAlphabetized.length;i++){
     var shirePerson = shirePeople[shirePeopleAlphabetized[i]];
@@ -25,16 +25,16 @@ router.get('/', function(req, res) {
     }
     newPerson["Bio"]=shirePerson["Bio"];
     if (shireYear==="1"){
-      newShirePeople["Freshman"][shirePeopleAlphabetized[i]]=newPerson;
+      newShirePeople["2018s"][shirePeopleAlphabetized[i]]=newPerson;
     }
     else if (shireYear==="2"){
-      newShirePeople["Sophomore"][shirePeopleAlphabetized[i]]=newPerson;
+      newShirePeople["2017s"][shirePeopleAlphabetized[i]]=newPerson;
     }    
     else if (shireYear==="3"){
-      newShirePeople["Junior"][shirePeopleAlphabetized[i]]=newPerson;
+      newShirePeople["2016s"][shirePeopleAlphabetized[i]]=newPerson;
     }
     else {
-      newShirePeople["Senior"][shirePeopleAlphabetized[i]]=newPerson;
+      newShirePeople["2015s"][shirePeopleAlphabetized[i]]=newPerson;
     }
   }
 	//req.session.currentUser = true;
