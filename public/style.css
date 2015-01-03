@@ -166,6 +166,19 @@ address a:hover{
 /*---------------------------------------------------------------------------------
 people */
 
+.people {
+    background-color: #D7E0D6;
+}
+
+.people .welcome {
+    margin-top: 0px;
+    height:155px;
+    padding-top:50px;
+    margin-bottom: 20px;
+    background-color: #98E6AC;
+    border-bottom: 4px solid #049F65;
+}
+
 .peeps{
   height:100px;
   width:150px;
