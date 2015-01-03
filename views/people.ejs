@@ -62,12 +62,14 @@
     <table class="people_table">
 
       <tr class="first_row">
+        <% if (year === '2018') {%>
         <th>Potrait</th>
         <th>Name</th>
         <th>Course</th>
         <th>Kerberos</th>
         <th id="bio">Bio</th>
-      </tr>
+        <%}%>
+      </tr>    
 
       <%for (var name in shirePeople[year]){%>
         <tr>
