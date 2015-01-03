@@ -3894,7 +3894,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 680px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-right:-15px;
+    margin-right: -5px;
     margin-left: -15px;
   }
 }
