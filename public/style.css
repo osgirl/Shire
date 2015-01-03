@@ -674,7 +674,7 @@ history */
     border-bottom: 4px solid #049F65;
 }
 
-#previous-story {
+.previous-story {
   margin-right: 45px;
   display: inline-block;
   vertical-align: top;
@@ -682,11 +682,11 @@ history */
   color:#049F65; 
 }
 
-#previous-story:hover {
+.previous-story:hover {
     color: #025938;
 }
 
-#next-story {
+.next-story {
   margin-left: 45px;
   display: inline-block;
   vertical-align: top;
@@ -694,7 +694,7 @@ history */
   color:#049F65;
 }
 
-#next-story:hover {
+.next-story:hover {
     color: #025938;
 }
 
@@ -721,6 +721,9 @@ history */
     padding-bottom: 0px; 
 }
 
+.history-hide {
+    display:none;
+}
 
 
 .dropdown-menu {
