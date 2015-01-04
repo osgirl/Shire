@@ -149,10 +149,11 @@ people */
 }
 
 .first_row > th {
-  border: 4px solid #fff;
+  border-bottom: 4px solid #fff;
   padding: 10px;
   background: #98C6AA;
   text-align: center;
+  border-top: none;
 }
 
 .people_table{
@@ -163,6 +164,15 @@ people */
   margin-bottom:20px;
 }
 
+.yearHead {
+    border: 4px solid #fff;
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+    background: #98C6AA;
+    border-bottom: none;
+}
+
 .people_table > tbody > tr > td{
   border: 4px solid #fff;
   width: 170px;
@@ -170,8 +180,13 @@ people */
   background: #98E6AC;
 }
 
+#portrait {
+    border-left: 4px solid #fff;
+}
+
 #bio {
     width:33%;
+    border-right: 4px solid #fff;
 }
 
 /*---------------------------------------------------------------------------------

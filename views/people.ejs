@@ -63,9 +63,9 @@
       <table class="people_table">
 
         <% if (year === 'Freshmen') {%>
-          <h1>Class of 2018</h1>
+        <th colspan="5" class="yearHead">2018</th>
           <tr class="first_row">
-            <th>Potrait</th>
+            <th id="portrait">Potrait</th>
             <th>Name</th>
             <th>Course</th>
             <th>Kerberos</th>
@@ -73,12 +73,11 @@
           </tr>    
         <%}%>
         <%if (year==='Sophomores'){%>
-          <h1>Class of 2017</h1>
+          <th colspan="5" class="yearHead">2017</th>
         <%}%>
         <%if (year==='Juniors'){%>
-          <h1>Class of 2016</h1>
+          <th colspan="5" class="yearHead">2016</th>
         <%}%>
-        <!--<th colspan="5">Class of <%=year%></th>-->
 
         <%for (var name in shirePeople[year]){%>
           <tr>
