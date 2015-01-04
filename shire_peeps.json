@@ -124,5 +124,19 @@
 		"Kerberos": "cgalea",
 		"Bio":"Untitled We Stand (where my Bio stands for now)",
 		"Year":"3"
+	},	
+	"Mabbitt": {
+		"Name":"Matthew Babbitt",
+		"Course Number":"18",
+		"Kerberos": "mwabbitt",
+		"Bio":"I LIKE TURTLES",
+		"Year":"2"
+	},
+	"Greta": {
+		"Name":"Greta Lattanzi-Silveus",
+		"Course Number":"9",
+		"Kerberos": "gretals",
+		"Bio":"Insert Bio here: ...... (real origional I know!)",
+		"Year":"3"
 	}
 }
