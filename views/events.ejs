@@ -12,7 +12,7 @@
     <script src='./javascripts/eventsScript.js'></script>    
 
 </head>
-<body>
+<body class="events">
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,12 +69,12 @@
   </form>
   <div class="event-table-outer">
     <div class="event-info">
-      <p class="eventWhere">Event Where: <%=events[i].eventWhere%></p>
-      <p class="event-when">Event When: <%=events[i].eventWhen%></p>
+      <p class="eventWhere">Location: <%=events[i].eventWhere%></p>
+      <p class="event-when">Time: <%=events[i].eventWhen%></p>
     </div>
     <div class="meet-info">
-      <p class="meet-where">Meet Where: <%=events[i].meetWhere%></p>
-      <p class="meet-when">Meet When: <%=events[i].meetWhen%></p>
+      <p class="meet-where">Meeting Place: <%=events[i].meetWhere%></p>
+      <p class="meet-when">Meeting Time: <%=events[i].meetWhen%></p>
     </div>
   </div>
 </div>
@@ -85,21 +85,28 @@
 </div>
 
 <div class="add-event">
-  <form id="add-event-form" action="events/add_event" method="post"> 
-    <label>Title</label>
-    <input type="text" name="title" /> 
-    <label>Description</label>
-    <input class="userInput" type="text" name="description"/> 
-    <label>Event Where</label>
-    <input class="userInput" type="text" name="eventWhere"/>
-    <label>Event When</label>
-    <input class="userInput" type="text" name="eventWhen"/> 
-    <label>Meeting Where</label>
-    <input class="userInput" type="text" name="meetWhere"/> 
-    <label>Meeting When</label>
-    <input class="userInput" type="text" name="meetWhen"/> 
+  <form class="form-group" id="add-event-form" action="events/add_event" method="post"> 
+    <label id="labes">Title</label>
+    <input class="form-control" type="text" name="title" /> 
+    <label id="labes">Description</label>
+    <input class="userInput form-control" type="text" name="description"/> 
+    <label id="labes">Location</label>
+    <input class="userInput form-control" type="text" name="eventWhere"/>
+    <label id="labes">Time</label>
+    <input class="userInput form-control" type="text" name="eventWhen"/> 
+    <label id="labes">Meeting Place</label>
+    <input class="userInput form-control" type="text" name="meetWhere"/> 
+    <label id="labes">Meeting Time</label>
+    <input class="userInput form-control" type="text" name="meetWhen"/> 
     <button class="btn btn-success" type="submit">Add Event</button>
   </form>
+</div>
+
+<div class="footnote">
+      <address>
+        Written by Raymond Wu, Christopher Womack, and Sophie Mori<br>
+        <a href="mailto:raywu22@mit.edu">raywu22@mit.edu</a> &bull; <a href="mailto:cwwomack@mit.edu">cwwomack@mit.edu</a> &bull; <a href="mailto:ksmori@mit.edu">ksmori@mit.edu</a>
+      </address>
 </div>
     
 </body>
