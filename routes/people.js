@@ -21,7 +21,7 @@ router.get('/', function(req, res) {
       newPerson["Kerberos"]="Login to view";
     }
     else {
-      newPerson["Kerberos"]=shirePerson["Kerberos"];      
+      newPerson["Kerberos"]=shirePerson["Kerberos"];
     }
     newPerson["Bio"]=shirePerson["Bio"];
     if (shireYear==="1"){
