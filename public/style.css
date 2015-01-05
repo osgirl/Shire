@@ -111,6 +111,7 @@ body{
 .footnote{
     font-family: 'Lato';
     text-align: center;
+    border-top: 4px solid #049F65;
 }
 
 address{
@@ -348,14 +349,30 @@ a .login-button {
 /*---------------------------------------------------------------------------------
 events */
 
+.events {
+    background-color: #D7E0D6;
+}
+
+.events .welcome {
+    margin-top: 0px;
+    height:155px;
+    padding-top:50px;
+    margin-bottom: 20px;
+    background-color: #98E6AC;
+    border-bottom: 4px solid #049F65;
+}
+
 .event-outer {
     margin-left:30px;
     margin-right:20px;
     height:200px;
     padding-left:25px;
     margin-top:-5px;
-    background-color:#66CC99;
-
+    background-color: #57DB85;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 4px solid #04B550;
 }
 
 .event-outer > h2{
@@ -386,6 +403,10 @@ events */
     width:30px;
 }
 
+.events .form-control {
+    height: 25px;
+}
+
 .add-event {
     width:150px;
     height:25px;
@@ -394,6 +415,17 @@ events */
     margin-left:auto;
     margin-right:auto;
     margin-bottom:400px;
+}
+
+.events .btn {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#labes {
+    text-align: center;
 }
 
 /*---------------------------------------------------------------------------------
@@ -541,6 +573,10 @@ photos */
 /*---------------------------------------------------------------------------------
 movies */
 
+.movies {
+    background-color: #D7E0D6;
+}
+
 .movies-container {
     width:600px;
     height:60px;
@@ -552,6 +588,16 @@ movies */
     margin-top:-5px;
     font-weight:bold;
     border-radius: 10px;
+    background-color: #98E6AC;
+}
+
+.movies .welcome {
+    margin-top: 0px;
+    height:155px;
+    padding-top:50px;
+    margin-bottom: 20px;
+    background-color: #98E6AC;
+    border-bottom: 4px solid #049F65;
 }
 
 .movies-row {
@@ -719,25 +765,6 @@ history */
     display:none;
 }
 
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  z-index: 1000;
-  display: none;
-  /*min-width: 160px;*/
-  padding: 5px 0;
-  margin-left: -17px;
-  text-align: center;
-  list-style: none;
-  background-color: rgba(152, 230, 172, 0.8);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box;
-  /*-webkit-background-clip: padding-box;
-          background-clip: padding-box;*/
-  border-bottom:1px solid #049F65;
-  /*border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);*/
+.history .footnote {
+    border:none;
 }
