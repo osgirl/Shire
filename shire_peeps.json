@@ -138,5 +138,19 @@
 		"Kerberos": "gretals",
 		"Bio":"Insert Bio here: ...... (real original I know!)",
 		"Year":"3"
+	},
+	"Dontony": {
+		"Name":"antonio moreno",
+		"Course Number":"6-3?",
+		"Kerberos": "dontony",
+		"Bio":"next house best house",
+		"Year":"4"
+	},
+	"Jackie": {
+		"Name":"Jaclyn Belleville",
+		"Course Number":"3",
+		"Kerberos": "jaclynb",
+		"Bio":"I’m bad at bios...",
+		"Year":"3"
 	}
 }

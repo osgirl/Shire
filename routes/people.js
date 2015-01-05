@@ -38,7 +38,6 @@ router.get('/', function(req, res) {
     }
   }
 	//req.session.currentUser = true;
-  console.log(newShirePeople);
 	if (!req.session.currentUser){
 		res.render('people',{isLoggedIn:false,
                           shirePeople:newShirePeople});

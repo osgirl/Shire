@@ -78,7 +78,9 @@
         <%if (year==='Juniors'){%>
           <th colspan="5" class="yearHead">2016</th>
         <%}%>
-
+        <%if (year==='Seniors'){%>
+          <th colspan="5" class="yearHead">2015</th>
+        <%}%>
         <%for (var name in shirePeople[year]){%>
           <tr>
             <td><div><img class="peeps" src="./images/shire_people/<%=name%>.jpg"></div></td>
