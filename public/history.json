@@ -1,12 +1,11 @@
 {
-	"history0":"A long long time ago,",
-	"history1":"I can still remember",
-	"history2":"When that music used to make me smile",
-	"history3":"And I knew if I had my chance",
-	"history4":"I could make those people dance",
-	"history5":"And maybe they'd be happy",
-	"history6":"for a while...",
-	"history7":"SPECS: cannot have less than 2 keys or more than 10 keys",
-	"history8":"this format must be preserved (keys must be history followed by an int in order)",
-	"history9":"careful about commas, last element has no comma at end, but all others do"
+	"history0":"COMING SOON",
+	"history1":"A long long time ago,",
+	"history2":"I can still remember",
+	"history3":"When that music used to make me smile",
+	"history4":"And I knew if I had my chance",
+	"history5":"I could make those people dance",
+	"history6":"And maybe they'd be happy",
+	"history7":"for a while...",
+	"history8":"SPECS: cannot have less than 2 keys or more than 10 keys, this format must be preserved (keys must be history followed by an int in order), careful about commas, last element has no comma at end, but all others do"
 }
