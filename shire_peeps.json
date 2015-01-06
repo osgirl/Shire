@@ -166,5 +166,26 @@
 		"Kerberos": "miburns",
 		"Bio":"Feeziks!",
 		"Year":"1"
+	},
+	"Ben": {
+		"Name":"Ben Mattinson",
+		"Course Number":"6-3",
+		"Kerberos": "bmatt",
+		"Bio":"BIOBIOBIO. | Also something about guitars and skiing and piano and computers",
+		"Year":"3"
+	},
+	"LiamCohen": {
+		"Name":"Liam Cohen",
+		"Course Number":"8",
+		"Kerberos": "lc2017",
+		"Bio":"My life ambition is to discover one equation that governs the entire universe...nbd",
+		"Year":"2"
+	},
+	"Jonathan": {
+		"Name":"Jonathan Lim",
+		"Course Number":"6-3",
+		"Kerberos": "dhlim",
+		"Bio":"I am my bio",
+		"Year":"3"
 	}
 }
