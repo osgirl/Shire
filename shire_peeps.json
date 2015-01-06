@@ -152,5 +152,19 @@
 		"Kerberos": "jaclynb",
 		"Bio":"I’m bad at bios...",
 		"Year":"3"
+	},
+	"Mike": {
+		"Name":"Michael DeTienne",
+		"Course Number":"6.1 probably",
+		"Kerberos": "detienne",
+		"Bio":"I grew up doing garage engineering for fun. I spend most of my free time at MITERS doing silly electric go karts, tesla coils, or other funny electo/mechanical projects.",
+		"Year":"2"
+	},
+	"MatthewB": {
+		"Name":"Matthew Burns",
+		"Course Number":"8, 6.1",
+		"Kerberos": "miburns",
+		"Bio":"Feeziks!",
+		"Year":"1"
 	}
 }
