@@ -417,7 +417,7 @@ events */
     margin-bottom:400px;
 }
 
-.events .btn {
+#addEvent {
     margin-top: 10px;
     display: block;
     margin-left: auto;
